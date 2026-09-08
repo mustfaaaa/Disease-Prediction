@@ -1,0 +1,3099 @@
+{
+  "comparison_table": [
+    {
+      "model": "Logistic Regression",
+      "cv_roc_auc_mean": 0.8976,
+      "cv_roc_auc_std": 0.0432,
+      "cv_pr_auc_mean": 0.8938,
+      "cv_pr_auc_std": 0.048,
+      "cv_f1_mean": 0.8092,
+      "cv_recall_mean": 0.7941,
+      "cv_accuracy_mean": 0.828,
+      "cv_n_fits": 25,
+      "cv_brier": 0.1203,
+      "generalisation_gap": 0.0337,
+      "test_roc_auc": 0.9589,
+      "test_pr_auc": 0.942,
+      "test_accuracy": 0.8689,
+      "test_f1": 0.8667,
+      "test_sensitivity": 0.9286,
+      "test_specificity": 0.8182,
+      "test_precision": 0.8125
+    },
+    {
+      "model": "SVM (Linear)",
+      "cv_roc_auc_mean": 0.895,
+      "cv_roc_auc_std": 0.0431,
+      "cv_pr_auc_mean": 0.8935,
+      "cv_pr_auc_std": 0.0451,
+      "cv_f1_mean": 0.8018,
+      "cv_recall_mean": 0.7687,
+      "cv_accuracy_mean": 0.8273,
+      "cv_n_fits": 25,
+      "cv_brier": 0.1224,
+      "generalisation_gap": 0.0294,
+      "test_roc_auc": 0.9556,
+      "test_pr_auc": 0.9389,
+      "test_accuracy": 0.8361,
+      "test_f1": 0.8387,
+      "test_sensitivity": 0.9286,
+      "test_specificity": 0.7576,
+      "test_precision": 0.7647
+    },
+    {
+      "model": "SVM (RBF)",
+      "cv_roc_auc_mean": 0.8968,
+      "cv_roc_auc_std": 0.0408,
+      "cv_pr_auc_mean": 0.8932,
+      "cv_pr_auc_std": 0.0476,
+      "cv_f1_mean": 0.8045,
+      "cv_recall_mean": 0.7743,
+      "cv_accuracy_mean": 0.8273,
+      "cv_n_fits": 25,
+      "cv_brier": 0.122,
+      "generalisation_gap": 0.0247,
+      "test_roc_auc": 0.9578,
+      "test_pr_auc": 0.9424,
+      "test_accuracy": 0.8689,
+      "test_f1": 0.8667,
+      "test_sensitivity": 0.9286,
+      "test_specificity": 0.8182,
+      "test_precision": 0.8125
+    },
+    {
+      "model": "Random Forest",
+      "cv_roc_auc_mean": 0.8934,
+      "cv_roc_auc_std": 0.0414,
+      "cv_pr_auc_mean": 0.8935,
+      "cv_pr_auc_std": 0.0406,
+      "cv_f1_mean": 0.7827,
+      "cv_recall_mean": 0.7797,
+      "cv_accuracy_mean": 0.8025,
+      "cv_n_fits": 25,
+      "cv_brier": 0.133,
+      "generalisation_gap": 0.0823,
+      "test_roc_auc": 0.947,
+      "test_pr_auc": 0.9318,
+      "test_accuracy": 0.8852,
+      "test_f1": 0.8814,
+      "test_sensitivity": 0.9286,
+      "test_specificity": 0.8485,
+      "test_precision": 0.8387
+    },
+    {
+      "model": "XGBoost",
+      "cv_roc_auc_mean": 0.8954,
+      "cv_roc_auc_std": 0.0369,
+      "cv_pr_auc_mean": 0.8966,
+      "cv_pr_auc_std": 0.0363,
+      "cv_f1_mean": 0.7965,
+      "cv_recall_mean": 0.7924,
+      "cv_accuracy_mean": 0.8148,
+      "cv_n_fits": 25,
+      "cv_brier": 0.1274,
+      "generalisation_gap": 0.0552,
+      "test_roc_auc": 0.9437,
+      "test_pr_auc": 0.9414,
+      "test_accuracy": 0.8689,
+      "test_f1": 0.8621,
+      "test_sensitivity": 0.8929,
+      "test_specificity": 0.8485,
+      "test_precision": 0.8333
+    }
+  ],
+  "final_model": "Logistic Regression",
+  "final_test_metrics_default_threshold": {
+    "threshold": 0.5,
+    "accuracy": 0.8689,
+    "precision": 0.8125,
+    "recall": 0.9286,
+    "sensitivity": 0.9286,
+    "specificity": 0.8182,
+    "f1": 0.8667,
+    "roc_auc": 0.9589,
+    "pr_auc": 0.942,
+    "brier": 0.0885,
+    "confusion_matrix": {
+      "tn": 27,
+      "fp": 6,
+      "fn": 2,
+      "tp": 26
+    },
+    "n": 61
+  },
+  "final_test_metrics_chosen_threshold": {
+    "threshold": 0.38,
+    "accuracy": 0.8197,
+    "precision": 0.7297,
+    "recall": 0.9643,
+    "sensitivity": 0.9643,
+    "specificity": 0.697,
+    "f1": 0.8308,
+    "roc_auc": 0.9589,
+    "pr_auc": 0.942,
+    "brier": 0.0885,
+    "confusion_matrix": {
+      "tn": 23,
+      "fp": 10,
+      "fn": 1,
+      "tp": 27
+    },
+    "n": 61
+  },
+  "curves": {
+    "roc": {
+      "fpr": [
+        0.0,
+        0.0,
+        0.0,
+        0.0303,
+        0.0303,
+        0.1212,
+        0.1212,
+        0.1818,
+        0.1818,
+        0.3333,
+        0.3333,
+        1.0
+      ],
+      "tpr": [
+        0.0,
+        0.0357,
+        0.2857,
+        0.2857,
+        0.8929,
+        0.8929,
+        0.9286,
+        0.9286,
+        0.9643,
+        0.9643,
+        1.0,
+        1.0
+      ]
+    },
+    "pr": {
+      "recall": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.9643,
+        0.9643,
+        0.9643,
+        0.9643,
+        0.9643,
+        0.9643,
+        0.9286,
+        0.9286,
+        0.9286,
+        0.8929,
+        0.8929,
+        0.8929,
+        0.8929,
+        0.8571,
+        0.8214,
+        0.7857,
+        0.75,
+        0.7143,
+        0.6786,
+        0.6429,
+        0.6071,
+        0.5714,
+        0.5357,
+        0.5,
+        0.4643,
+        0.4286,
+        0.3929,
+        0.3571,
+        0.3214,
+        0.2857,
+        0.2857,
+        0.25,
+        0.2143,
+        0.1786,
+        0.1429,
+        0.1071,
+        0.0714,
+        0.0357,
+        0.0
+      ],
+      "precision": [
+        0.459,
+        0.4667,
+        0.4746,
+        0.4828,
+        0.4912,
+        0.5,
+        0.5091,
+        0.5185,
+        0.5283,
+        0.5385,
+        0.549,
+        0.56,
+        0.5714,
+        0.5833,
+        0.5957,
+        0.6087,
+        0.6222,
+        0.6364,
+        0.6512,
+        0.6667,
+        0.6829,
+        0.7,
+        0.7179,
+        0.7105,
+        0.7297,
+        0.75,
+        0.7714,
+        0.7941,
+        0.8182,
+        0.8125,
+        0.8387,
+        0.8667,
+        0.8621,
+        0.8929,
+        0.9259,
+        0.9615,
+        0.96,
+        0.9583,
+        0.9565,
+        0.9545,
+        0.9524,
+        0.95,
+        0.9474,
+        0.9444,
+        0.9412,
+        0.9375,
+        0.9333,
+        0.9286,
+        0.9231,
+        0.9167,
+        0.9091,
+        0.9,
+        0.8889,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "positive_rate": 0.459
+  },
+  "threshold_analysis": {
+    "objective": "min_sensitivity",
+    "min_sensitivity_target": 0.85,
+    "default_threshold": 0.5,
+    "default_metrics": {
+      "threshold": 0.5,
+      "accuracy": 0.8512,
+      "precision": 0.8571,
+      "recall": 0.8108,
+      "sensitivity": 0.8108,
+      "specificity": 0.8855,
+      "f1": 0.8333,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "confusion_matrix": {
+        "tn": 116,
+        "fp": 15,
+        "fn": 21,
+        "tp": 90
+      },
+      "n": 242
+    },
+    "best_f1_threshold": 0.51,
+    "best_f1_metrics": {
+      "threshold": 0.51,
+      "accuracy": 0.8554,
+      "precision": 0.8725,
+      "recall": 0.8018,
+      "sensitivity": 0.8018,
+      "specificity": 0.9008,
+      "f1": 0.8357,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    "min_sensitivity_threshold": 0.38,
+    "min_sensitivity_metrics": {
+      "threshold": 0.38,
+      "accuracy": 0.8058,
+      "precision": 0.75,
+      "recall": 0.8649,
+      "sensitivity": 0.8649,
+      "specificity": 0.7557,
+      "f1": 0.8033,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    "chosen_threshold": 0.38,
+    "chosen_metrics": {
+      "threshold": 0.38,
+      "accuracy": 0.8058,
+      "precision": 0.75,
+      "recall": 0.8649,
+      "sensitivity": 0.8649,
+      "specificity": 0.7557,
+      "f1": 0.8033,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    }
+  },
+  "threshold_sweep": [
+    {
+      "threshold": 0.05,
+      "accuracy": 0.5207,
+      "precision": 0.4889,
+      "recall": 0.991,
+      "sensitivity": 0.991,
+      "specificity": 0.1221,
+      "f1": 0.6548,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.06,
+      "accuracy": 0.5455,
+      "precision": 0.5023,
+      "recall": 0.991,
+      "sensitivity": 0.991,
+      "specificity": 0.1679,
+      "f1": 0.6667,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.07,
+      "accuracy": 0.5702,
+      "precision": 0.5164,
+      "recall": 0.991,
+      "sensitivity": 0.991,
+      "specificity": 0.2137,
+      "f1": 0.679,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.08,
+      "accuracy": 0.5909,
+      "precision": 0.5288,
+      "recall": 0.991,
+      "sensitivity": 0.991,
+      "specificity": 0.2519,
+      "f1": 0.6897,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.09,
+      "accuracy": 0.6157,
+      "precision": 0.545,
+      "recall": 0.982,
+      "sensitivity": 0.982,
+      "specificity": 0.3053,
+      "f1": 0.701,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.1,
+      "accuracy": 0.6364,
+      "precision": 0.559,
+      "recall": 0.982,
+      "sensitivity": 0.982,
+      "specificity": 0.3435,
+      "f1": 0.7124,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.11,
+      "accuracy": 0.6446,
+      "precision": 0.5654,
+      "recall": 0.973,
+      "sensitivity": 0.973,
+      "specificity": 0.3664,
+      "f1": 0.7152,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.12,
+      "accuracy": 0.6488,
+      "precision": 0.5684,
+      "recall": 0.973,
+      "sensitivity": 0.973,
+      "specificity": 0.374,
+      "f1": 0.7176,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.13,
+      "accuracy": 0.686,
+      "precision": 0.5967,
+      "recall": 0.973,
+      "sensitivity": 0.973,
+      "specificity": 0.4427,
+      "f1": 0.7397,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.14,
+      "accuracy": 0.6942,
+      "precision": 0.6034,
+      "recall": 0.973,
+      "sensitivity": 0.973,
+      "specificity": 0.458,
+      "f1": 0.7448,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.15,
+      "accuracy": 0.6901,
+      "precision": 0.6011,
+      "recall": 0.964,
+      "sensitivity": 0.964,
+      "specificity": 0.458,
+      "f1": 0.7405,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.16,
+      "accuracy": 0.6901,
+      "precision": 0.6011,
+      "recall": 0.964,
+      "sensitivity": 0.964,
+      "specificity": 0.458,
+      "f1": 0.7405,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.17,
+      "accuracy": 0.7025,
+      "precision": 0.6114,
+      "recall": 0.964,
+      "sensitivity": 0.964,
+      "specificity": 0.4809,
+      "f1": 0.7483,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.18,
+      "accuracy": 0.7066,
+      "precision": 0.6163,
+      "recall": 0.955,
+      "sensitivity": 0.955,
+      "specificity": 0.4962,
+      "f1": 0.7491,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.19,
+      "accuracy": 0.7273,
+      "precision": 0.6347,
+      "recall": 0.955,
+      "sensitivity": 0.955,
+      "specificity": 0.5344,
+      "f1": 0.7626,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.2,
+      "accuracy": 0.7314,
+      "precision": 0.6386,
+      "recall": 0.955,
+      "sensitivity": 0.955,
+      "specificity": 0.542,
+      "f1": 0.7653,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.21,
+      "accuracy": 0.7273,
+      "precision": 0.6364,
+      "recall": 0.9459,
+      "sensitivity": 0.9459,
+      "specificity": 0.542,
+      "f1": 0.7609,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.22,
+      "accuracy": 0.7273,
+      "precision": 0.6364,
+      "recall": 0.9459,
+      "sensitivity": 0.9459,
+      "specificity": 0.542,
+      "f1": 0.7609,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.23,
+      "accuracy": 0.7438,
+      "precision": 0.6522,
+      "recall": 0.9459,
+      "sensitivity": 0.9459,
+      "specificity": 0.5725,
+      "f1": 0.7721,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.24,
+      "accuracy": 0.7603,
+      "precision": 0.6688,
+      "recall": 0.9459,
+      "sensitivity": 0.9459,
+      "specificity": 0.6031,
+      "f1": 0.7836,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.25,
+      "accuracy": 0.7686,
+      "precision": 0.6797,
+      "recall": 0.9369,
+      "sensitivity": 0.9369,
+      "specificity": 0.626,
+      "f1": 0.7879,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.26,
+      "accuracy": 0.7851,
+      "precision": 0.698,
+      "recall": 0.9369,
+      "sensitivity": 0.9369,
+      "specificity": 0.6565,
+      "f1": 0.8,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.27,
+      "accuracy": 0.781,
+      "precision": 0.6959,
+      "recall": 0.9279,
+      "sensitivity": 0.9279,
+      "specificity": 0.6565,
+      "f1": 0.7954,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.28,
+      "accuracy": 0.7851,
+      "precision": 0.7007,
+      "recall": 0.9279,
+      "sensitivity": 0.9279,
+      "specificity": 0.6641,
+      "f1": 0.7984,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.29,
+      "accuracy": 0.7769,
+      "precision": 0.6966,
+      "recall": 0.9099,
+      "sensitivity": 0.9099,
+      "specificity": 0.6641,
+      "f1": 0.7891,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.3,
+      "accuracy": 0.7851,
+      "precision": 0.7063,
+      "recall": 0.9099,
+      "sensitivity": 0.9099,
+      "specificity": 0.6794,
+      "f1": 0.7953,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.31,
+      "accuracy": 0.781,
+      "precision": 0.7071,
+      "recall": 0.8919,
+      "sensitivity": 0.8919,
+      "specificity": 0.687,
+      "f1": 0.7888,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.32,
+      "accuracy": 0.7934,
+      "precision": 0.7226,
+      "recall": 0.8919,
+      "sensitivity": 0.8919,
+      "specificity": 0.7099,
+      "f1": 0.7984,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.33,
+      "accuracy": 0.7934,
+      "precision": 0.7226,
+      "recall": 0.8919,
+      "sensitivity": 0.8919,
+      "specificity": 0.7099,
+      "f1": 0.7984,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.34,
+      "accuracy": 0.7934,
+      "precision": 0.7226,
+      "recall": 0.8919,
+      "sensitivity": 0.8919,
+      "specificity": 0.7099,
+      "f1": 0.7984,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.35,
+      "accuracy": 0.7893,
+      "precision": 0.7206,
+      "recall": 0.8829,
+      "sensitivity": 0.8829,
+      "specificity": 0.7099,
+      "f1": 0.7935,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.36,
+      "accuracy": 0.7975,
+      "precision": 0.7348,
+      "recall": 0.8739,
+      "sensitivity": 0.8739,
+      "specificity": 0.7328,
+      "f1": 0.7984,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.37,
+      "accuracy": 0.8017,
+      "precision": 0.7405,
+      "recall": 0.8739,
+      "sensitivity": 0.8739,
+      "specificity": 0.7405,
+      "f1": 0.8017,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.38,
+      "accuracy": 0.8058,
+      "precision": 0.75,
+      "recall": 0.8649,
+      "sensitivity": 0.8649,
+      "specificity": 0.7557,
+      "f1": 0.8033,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.39,
+      "accuracy": 0.8017,
+      "precision": 0.752,
+      "recall": 0.8468,
+      "sensitivity": 0.8468,
+      "specificity": 0.7634,
+      "f1": 0.7966,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.4,
+      "accuracy": 0.8017,
+      "precision": 0.7561,
+      "recall": 0.8378,
+      "sensitivity": 0.8378,
+      "specificity": 0.771,
+      "f1": 0.7949,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.41,
+      "accuracy": 0.814,
+      "precision": 0.775,
+      "recall": 0.8378,
+      "sensitivity": 0.8378,
+      "specificity": 0.7939,
+      "f1": 0.8052,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.42,
+      "accuracy": 0.8182,
+      "precision": 0.7815,
+      "recall": 0.8378,
+      "sensitivity": 0.8378,
+      "specificity": 0.8015,
+      "f1": 0.8087,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.43,
+      "accuracy": 0.8264,
+      "precision": 0.7949,
+      "recall": 0.8378,
+      "sensitivity": 0.8378,
+      "specificity": 0.8168,
+      "f1": 0.8158,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.44,
+      "accuracy": 0.843,
+      "precision": 0.823,
+      "recall": 0.8378,
+      "sensitivity": 0.8378,
+      "specificity": 0.8473,
+      "f1": 0.8304,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.45,
+      "accuracy": 0.8471,
+      "precision": 0.8304,
+      "recall": 0.8378,
+      "sensitivity": 0.8378,
+      "specificity": 0.855,
+      "f1": 0.8341,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.46,
+      "accuracy": 0.843,
+      "precision": 0.8288,
+      "recall": 0.8288,
+      "sensitivity": 0.8288,
+      "specificity": 0.855,
+      "f1": 0.8288,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.47,
+      "accuracy": 0.8388,
+      "precision": 0.8273,
+      "recall": 0.8198,
+      "sensitivity": 0.8198,
+      "specificity": 0.855,
+      "f1": 0.8235,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.48,
+      "accuracy": 0.8388,
+      "precision": 0.8273,
+      "recall": 0.8198,
+      "sensitivity": 0.8198,
+      "specificity": 0.855,
+      "f1": 0.8235,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.49,
+      "accuracy": 0.843,
+      "precision": 0.8411,
+      "recall": 0.8108,
+      "sensitivity": 0.8108,
+      "specificity": 0.8702,
+      "f1": 0.8257,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.5,
+      "accuracy": 0.8512,
+      "precision": 0.8571,
+      "recall": 0.8108,
+      "sensitivity": 0.8108,
+      "specificity": 0.8855,
+      "f1": 0.8333,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.51,
+      "accuracy": 0.8554,
+      "precision": 0.8725,
+      "recall": 0.8018,
+      "sensitivity": 0.8018,
+      "specificity": 0.9008,
+      "f1": 0.8357,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.52,
+      "accuracy": 0.8471,
+      "precision": 0.87,
+      "recall": 0.7838,
+      "sensitivity": 0.7838,
+      "specificity": 0.9008,
+      "f1": 0.8246,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.53,
+      "accuracy": 0.8471,
+      "precision": 0.87,
+      "recall": 0.7838,
+      "sensitivity": 0.7838,
+      "specificity": 0.9008,
+      "f1": 0.8246,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.54,
+      "accuracy": 0.8512,
+      "precision": 0.8788,
+      "recall": 0.7838,
+      "sensitivity": 0.7838,
+      "specificity": 0.9084,
+      "f1": 0.8286,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.55,
+      "accuracy": 0.8512,
+      "precision": 0.8788,
+      "recall": 0.7838,
+      "sensitivity": 0.7838,
+      "specificity": 0.9084,
+      "f1": 0.8286,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.56,
+      "accuracy": 0.843,
+      "precision": 0.8763,
+      "recall": 0.7658,
+      "sensitivity": 0.7658,
+      "specificity": 0.9084,
+      "f1": 0.8173,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.57,
+      "accuracy": 0.843,
+      "precision": 0.8763,
+      "recall": 0.7658,
+      "sensitivity": 0.7658,
+      "specificity": 0.9084,
+      "f1": 0.8173,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.58,
+      "accuracy": 0.843,
+      "precision": 0.8763,
+      "recall": 0.7658,
+      "sensitivity": 0.7658,
+      "specificity": 0.9084,
+      "f1": 0.8173,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.59,
+      "accuracy": 0.843,
+      "precision": 0.8763,
+      "recall": 0.7658,
+      "sensitivity": 0.7658,
+      "specificity": 0.9084,
+      "f1": 0.8173,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.6,
+      "accuracy": 0.8388,
+      "precision": 0.875,
+      "recall": 0.7568,
+      "sensitivity": 0.7568,
+      "specificity": 0.9084,
+      "f1": 0.8116,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.61,
+      "accuracy": 0.8347,
+      "precision": 0.8737,
+      "recall": 0.7477,
+      "sensitivity": 0.7477,
+      "specificity": 0.9084,
+      "f1": 0.8058,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.62,
+      "accuracy": 0.8388,
+      "precision": 0.883,
+      "recall": 0.7477,
+      "sensitivity": 0.7477,
+      "specificity": 0.916,
+      "f1": 0.8098,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.63,
+      "accuracy": 0.8347,
+      "precision": 0.8817,
+      "recall": 0.7387,
+      "sensitivity": 0.7387,
+      "specificity": 0.916,
+      "f1": 0.8039,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.64,
+      "accuracy": 0.8347,
+      "precision": 0.8817,
+      "recall": 0.7387,
+      "sensitivity": 0.7387,
+      "specificity": 0.916,
+      "f1": 0.8039,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.65,
+      "accuracy": 0.8347,
+      "precision": 0.8817,
+      "recall": 0.7387,
+      "sensitivity": 0.7387,
+      "specificity": 0.916,
+      "f1": 0.8039,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.66,
+      "accuracy": 0.8306,
+      "precision": 0.8889,
+      "recall": 0.7207,
+      "sensitivity": 0.7207,
+      "specificity": 0.9237,
+      "f1": 0.796,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.67,
+      "accuracy": 0.8347,
+      "precision": 0.8989,
+      "recall": 0.7207,
+      "sensitivity": 0.7207,
+      "specificity": 0.9313,
+      "f1": 0.8,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.68,
+      "accuracy": 0.8388,
+      "precision": 0.9091,
+      "recall": 0.7207,
+      "sensitivity": 0.7207,
+      "specificity": 0.9389,
+      "f1": 0.804,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.69,
+      "accuracy": 0.8347,
+      "precision": 0.908,
+      "recall": 0.7117,
+      "sensitivity": 0.7117,
+      "specificity": 0.9389,
+      "f1": 0.798,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.7,
+      "accuracy": 0.8347,
+      "precision": 0.908,
+      "recall": 0.7117,
+      "sensitivity": 0.7117,
+      "specificity": 0.9389,
+      "f1": 0.798,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.71,
+      "accuracy": 0.8306,
+      "precision": 0.9167,
+      "recall": 0.6937,
+      "sensitivity": 0.6937,
+      "specificity": 0.9466,
+      "f1": 0.7897,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.72,
+      "accuracy": 0.8264,
+      "precision": 0.9157,
+      "recall": 0.6847,
+      "sensitivity": 0.6847,
+      "specificity": 0.9466,
+      "f1": 0.7835,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.73,
+      "accuracy": 0.814,
+      "precision": 0.9125,
+      "recall": 0.6577,
+      "sensitivity": 0.6577,
+      "specificity": 0.9466,
+      "f1": 0.7644,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.74,
+      "accuracy": 0.814,
+      "precision": 0.9125,
+      "recall": 0.6577,
+      "sensitivity": 0.6577,
+      "specificity": 0.9466,
+      "f1": 0.7644,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.75,
+      "accuracy": 0.8099,
+      "precision": 0.9114,
+      "recall": 0.6486,
+      "sensitivity": 0.6486,
+      "specificity": 0.9466,
+      "f1": 0.7579,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.76,
+      "accuracy": 0.8058,
+      "precision": 0.9103,
+      "recall": 0.6396,
+      "sensitivity": 0.6396,
+      "specificity": 0.9466,
+      "f1": 0.7513,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.77,
+      "accuracy": 0.7975,
+      "precision": 0.9079,
+      "recall": 0.6216,
+      "sensitivity": 0.6216,
+      "specificity": 0.9466,
+      "f1": 0.738,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.78,
+      "accuracy": 0.7975,
+      "precision": 0.9079,
+      "recall": 0.6216,
+      "sensitivity": 0.6216,
+      "specificity": 0.9466,
+      "f1": 0.738,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.79,
+      "accuracy": 0.7893,
+      "precision": 0.9054,
+      "recall": 0.6036,
+      "sensitivity": 0.6036,
+      "specificity": 0.9466,
+      "f1": 0.7243,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.8,
+      "accuracy": 0.7893,
+      "precision": 0.9054,
+      "recall": 0.6036,
+      "sensitivity": 0.6036,
+      "specificity": 0.9466,
+      "f1": 0.7243,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.81,
+      "accuracy": 0.7893,
+      "precision": 0.9167,
+      "recall": 0.5946,
+      "sensitivity": 0.5946,
+      "specificity": 0.9542,
+      "f1": 0.7213,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.82,
+      "accuracy": 0.781,
+      "precision": 0.9265,
+      "recall": 0.5676,
+      "sensitivity": 0.5676,
+      "specificity": 0.9618,
+      "f1": 0.7039,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.83,
+      "accuracy": 0.7645,
+      "precision": 0.9219,
+      "recall": 0.5315,
+      "sensitivity": 0.5315,
+      "specificity": 0.9618,
+      "f1": 0.6743,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.84,
+      "accuracy": 0.7603,
+      "precision": 0.9206,
+      "recall": 0.5225,
+      "sensitivity": 0.5225,
+      "specificity": 0.9618,
+      "f1": 0.6667,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.85,
+      "accuracy": 0.7603,
+      "precision": 0.9206,
+      "recall": 0.5225,
+      "sensitivity": 0.5225,
+      "specificity": 0.9618,
+      "f1": 0.6667,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.86,
+      "accuracy": 0.7479,
+      "precision": 0.9167,
+      "recall": 0.4955,
+      "sensitivity": 0.4955,
+      "specificity": 0.9618,
+      "f1": 0.6433,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.87,
+      "accuracy": 0.7479,
+      "precision": 0.9167,
+      "recall": 0.4955,
+      "sensitivity": 0.4955,
+      "specificity": 0.9618,
+      "f1": 0.6433,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.88,
+      "accuracy": 0.7397,
+      "precision": 0.9138,
+      "recall": 0.4775,
+      "sensitivity": 0.4775,
+      "specificity": 0.9618,
+      "f1": 0.6272,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.89,
+      "accuracy": 0.7355,
+      "precision": 0.9273,
+      "recall": 0.4595,
+      "sensitivity": 0.4595,
+      "specificity": 0.9695,
+      "f1": 0.6145,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.9,
+      "accuracy": 0.7273,
+      "precision": 0.9245,
+      "recall": 0.4414,
+      "sensitivity": 0.4414,
+      "specificity": 0.9695,
+      "f1": 0.5976,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.91,
+      "accuracy": 0.7231,
+      "precision": 0.94,
+      "recall": 0.4234,
+      "sensitivity": 0.4234,
+      "specificity": 0.9771,
+      "f1": 0.5839,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.92,
+      "accuracy": 0.7107,
+      "precision": 0.9556,
+      "recall": 0.3874,
+      "sensitivity": 0.3874,
+      "specificity": 0.9847,
+      "f1": 0.5513,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.93,
+      "accuracy": 0.7066,
+      "precision": 0.9545,
+      "recall": 0.3784,
+      "sensitivity": 0.3784,
+      "specificity": 0.9847,
+      "f1": 0.5419,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.94,
+      "accuracy": 0.6942,
+      "precision": 0.9512,
+      "recall": 0.3514,
+      "sensitivity": 0.3514,
+      "specificity": 0.9847,
+      "f1": 0.5132,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    },
+    {
+      "threshold": 0.95,
+      "accuracy": 0.6736,
+      "precision": 0.9444,
+      "recall": 0.3063,
+      "sensitivity": 0.3063,
+      "specificity": 0.9847,
+      "f1": 0.4626,
+      "roc_auc": 0.9048,
+      "pr_auc": 0.8945,
+      "brier": 0.1203,
+      "n": 242
+    }
+  ],
+  "calibration": {
+    "raw": {
+      "mean_predicted": [
+        0.0604,
+        0.1449,
+        0.2491,
+        0.3535,
+        0.4475,
+        0.5313,
+        0.6482,
+        0.7387,
+        0.8458,
+        0.9623
+      ],
+      "observed_frequency": [
+        0.0426,
+        0.1034,
+        0.2174,
+        0.4,
+        0.1667,
+        0.6667,
+        0.5556,
+        0.9231,
+        0.8571,
+        0.9245
+      ],
+      "bin_counts": [
+        47,
+        29,
+        23,
+        20,
+        18,
+        9,
+        9,
+        13,
+        21,
+        53
+      ],
+      "brier": 0.1203,
+      "expected_calibration_error": 0.0638,
+      "n_bins": 10,
+      "roc_auc": 0.9048
+    },
+    "sigmoid": {
+      "mean_predicted": [
+        0.073,
+        0.1406,
+        0.249,
+        0.3466,
+        0.4402,
+        0.558,
+        0.6492,
+        0.7398,
+        0.8491,
+        0.947
+      ],
+      "observed_frequency": [
+        0.037,
+        0.0952,
+        0.1786,
+        0.3077,
+        0.3333,
+        0.6,
+        0.9286,
+        0.875,
+        0.8571,
+        0.9667
+      ],
+      "bin_counts": [
+        27,
+        42,
+        28,
+        26,
+        21,
+        10,
+        14,
+        16,
+        28,
+        30
+      ],
+      "brier": 0.1228,
+      "expected_calibration_error": 0.0637,
+      "n_bins": 10,
+      "roc_auc": 0.9049
+    },
+    "isotonic": {
+      "mean_predicted": [
+        0.0436,
+        0.151,
+        0.2411,
+        0.3367,
+        0.441,
+        0.5543,
+        0.6763,
+        0.7604,
+        0.8701,
+        0.9605
+      ],
+      "observed_frequency": [
+        0.0714,
+        0.2381,
+        0.2941,
+        0.1333,
+        0.3684,
+        0.75,
+        0.5,
+        0.75,
+        0.9444,
+        0.9167
+      ],
+      "bin_counts": [
+        70,
+        21,
+        17,
+        15,
+        19,
+        8,
+        6,
+        8,
+        18,
+        60
+      ],
+      "brier": 0.1213,
+      "expected_calibration_error": 0.0652,
+      "n_bins": 10,
+      "roc_auc": 0.9
+    },
+    "best_by_brier": "raw",
+    "applied": "raw",
+    "note": "Brier score and expected calibration error are computed on cross-validated training predictions. Platt scaling (sigmoid) and isotonic regression were both fitted inside CV. The variant with the lowest Brier score is 'raw'; a margin of 0.002 is required before replacing the simpler uncalibrated model."
+  },
+  "cross_validation": {
+    "Logistic Regression": {
+      "roc_auc": {
+        "mean": 0.8976,
+        "std": 0.0432
+      },
+      "pr_auc": {
+        "mean": 0.8938,
+        "std": 0.048
+      },
+      "accuracy": {
+        "mean": 0.828,
+        "std": 0.0544
+      },
+      "precision": {
+        "mean": 0.8312,
+        "std": 0.0829
+      },
+      "recall": {
+        "mean": 0.7941,
+        "std": 0.0708
+      },
+      "f1": {
+        "mean": 0.8092,
+        "std": 0.0582
+      },
+      "train_roc_auc_mean": 0.9312,
+      "generalisation_gap_roc_auc": 0.0337,
+      "n_fits": 25
+    },
+    "SVM (Linear)": {
+      "roc_auc": {
+        "mean": 0.895,
+        "std": 0.0431
+      },
+      "pr_auc": {
+        "mean": 0.8935,
+        "std": 0.0451
+      },
+      "accuracy": {
+        "mean": 0.8273,
+        "std": 0.0455
+      },
+      "precision": {
+        "mean": 0.8444,
+        "std": 0.0612
+      },
+      "recall": {
+        "mean": 0.7687,
+        "std": 0.081
+      },
+      "f1": {
+        "mean": 0.8018,
+        "std": 0.0547
+      },
+      "train_roc_auc_mean": 0.9244,
+      "generalisation_gap_roc_auc": 0.0294,
+      "n_fits": 25
+    },
+    "SVM (RBF)": {
+      "roc_auc": {
+        "mean": 0.8968,
+        "std": 0.0408
+      },
+      "pr_auc": {
+        "mean": 0.8932,
+        "std": 0.0476
+      },
+      "accuracy": {
+        "mean": 0.8273,
+        "std": 0.0505
+      },
+      "precision": {
+        "mean": 0.8434,
+        "std": 0.0811
+      },
+      "recall": {
+        "mean": 0.7743,
+        "std": 0.0674
+      },
+      "f1": {
+        "mean": 0.8045,
+        "std": 0.0556
+      },
+      "train_roc_auc_mean": 0.9214,
+      "generalisation_gap_roc_auc": 0.0247,
+      "n_fits": 25
+    },
+    "Random Forest": {
+      "roc_auc": {
+        "mean": 0.8934,
+        "std": 0.0414
+      },
+      "pr_auc": {
+        "mean": 0.8935,
+        "std": 0.0406
+      },
+      "accuracy": {
+        "mean": 0.8025,
+        "std": 0.0472
+      },
+      "precision": {
+        "mean": 0.7932,
+        "std": 0.0698
+      },
+      "recall": {
+        "mean": 0.7797,
+        "std": 0.0819
+      },
+      "f1": {
+        "mean": 0.7827,
+        "std": 0.0537
+      },
+      "train_roc_auc_mean": 0.9758,
+      "generalisation_gap_roc_auc": 0.0823,
+      "n_fits": 25
+    },
+    "XGBoost": {
+      "roc_auc": {
+        "mean": 0.8954,
+        "std": 0.0369
+      },
+      "pr_auc": {
+        "mean": 0.8966,
+        "std": 0.0363
+      },
+      "accuracy": {
+        "mean": 0.8148,
+        "std": 0.0505
+      },
+      "precision": {
+        "mean": 0.8082,
+        "std": 0.0749
+      },
+      "recall": {
+        "mean": 0.7924,
+        "std": 0.0793
+      },
+      "f1": {
+        "mean": 0.7965,
+        "std": 0.055
+      },
+      "train_roc_auc_mean": 0.9506,
+      "generalisation_gap_roc_auc": 0.0552,
+      "n_fits": 25
+    }
+  },
+  "per_model_details": {
+    "Logistic Regression": {
+      "best_params": {
+        "clf__C": 0.5,
+        "clf__class_weight": "balanced",
+        "clf__l1_ratio": 0.0
+      },
+      "search_strategy": "GridSearchCV(24 combos)",
+      "best_search_score": 0.9085,
+      "search_scoring": "roc_auc",
+      "notes": "Regularised linear baseline; coefficients are directly readable.",
+      "oof_metrics": {
+        "threshold": 0.5,
+        "accuracy": 0.8512,
+        "precision": 0.8571,
+        "recall": 0.8108,
+        "sensitivity": 0.8108,
+        "specificity": 0.8855,
+        "f1": 0.8333,
+        "roc_auc": 0.9048,
+        "pr_auc": 0.8945,
+        "brier": 0.1203,
+        "confusion_matrix": {
+          "tn": 116,
+          "fp": 15,
+          "fn": 21,
+          "tp": 90
+        },
+        "n": 242
+      },
+      "test_metrics_default_threshold": {
+        "threshold": 0.5,
+        "accuracy": 0.8689,
+        "precision": 0.8125,
+        "recall": 0.9286,
+        "sensitivity": 0.9286,
+        "specificity": 0.8182,
+        "f1": 0.8667,
+        "roc_auc": 0.9589,
+        "pr_auc": 0.942,
+        "brier": 0.0885,
+        "confusion_matrix": {
+          "tn": 27,
+          "fp": 6,
+          "fn": 2,
+          "tp": 26
+        },
+        "n": 61
+      }
+    },
+    "SVM (Linear)": {
+      "best_params": {
+        "clf__estimator__C": 0.1,
+        "clf__estimator__class_weight": null
+      },
+      "search_strategy": "GridSearchCV(8 combos)",
+      "best_search_score": 0.9036,
+      "search_scoring": "roc_auc",
+      "notes": "Maximum-margin linear separator; scaling is mandatory. Probabilities come from Platt scaling on internal folds.",
+      "oof_metrics": {
+        "threshold": 0.5,
+        "accuracy": 0.8471,
+        "precision": 0.8627,
+        "recall": 0.7928,
+        "sensitivity": 0.7928,
+        "specificity": 0.8931,
+        "f1": 0.8263,
+        "roc_auc": 0.8986,
+        "pr_auc": 0.8951,
+        "brier": 0.1224,
+        "confusion_matrix": {
+          "tn": 117,
+          "fp": 14,
+          "fn": 23,
+          "tp": 88
+        },
+        "n": 242
+      },
+      "test_metrics_default_threshold": {
+        "threshold": 0.5,
+        "accuracy": 0.8361,
+        "precision": 0.7647,
+        "recall": 0.9286,
+        "sensitivity": 0.9286,
+        "specificity": 0.7576,
+        "f1": 0.8387,
+        "roc_auc": 0.9556,
+        "pr_auc": 0.9389,
+        "brier": 0.0929,
+        "confusion_matrix": {
+          "tn": 25,
+          "fp": 8,
+          "fn": 2,
+          "tp": 26
+        },
+        "n": 61
+      }
+    },
+    "SVM (RBF)": {
+      "best_params": {
+        "clf__estimator__C": 1.0,
+        "clf__estimator__class_weight": "balanced",
+        "clf__estimator__gamma": 0.01
+      },
+      "search_strategy": "GridSearchCV(32 combos)",
+      "best_search_score": 0.9054,
+      "search_scoring": "roc_auc",
+      "notes": "Non-linear kernel; C and gamma jointly control the margin. Probabilities come from Platt scaling on internal folds.",
+      "oof_metrics": {
+        "threshold": 0.5,
+        "accuracy": 0.8471,
+        "precision": 0.87,
+        "recall": 0.7838,
+        "sensitivity": 0.7838,
+        "specificity": 0.9008,
+        "f1": 0.8246,
+        "roc_auc": 0.9034,
+        "pr_auc": 0.8967,
+        "brier": 0.122,
+        "confusion_matrix": {
+          "tn": 118,
+          "fp": 13,
+          "fn": 24,
+          "tp": 87
+        },
+        "n": 242
+      },
+      "test_metrics_default_threshold": {
+        "threshold": 0.5,
+        "accuracy": 0.8689,
+        "precision": 0.8125,
+        "recall": 0.9286,
+        "sensitivity": 0.9286,
+        "specificity": 0.8182,
+        "f1": 0.8667,
+        "roc_auc": 0.9578,
+        "pr_auc": 0.9424,
+        "brier": 0.0854,
+        "confusion_matrix": {
+          "tn": 27,
+          "fp": 6,
+          "fn": 2,
+          "tp": 26
+        },
+        "n": 61
+      }
+    },
+    "Random Forest": {
+      "best_params": {
+        "clf__n_estimators": 600,
+        "clf__min_samples_split": 5,
+        "clf__min_samples_leaf": 4,
+        "clf__max_features": "sqrt",
+        "clf__max_depth": null,
+        "clf__class_weight": "balanced"
+      },
+      "search_strategy": "RandomizedSearchCV(60 of 288 combos)",
+      "best_search_score": 0.8999,
+      "search_scoring": "roc_auc",
+      "notes": "Bagged trees; depth and leaf size are the main brakes on overfitting at n=303.",
+      "oof_metrics": {
+        "threshold": 0.5,
+        "accuracy": 0.8058,
+        "precision": 0.7857,
+        "recall": 0.7928,
+        "sensitivity": 0.7928,
+        "specificity": 0.8168,
+        "f1": 0.7892,
+        "roc_auc": 0.8955,
+        "pr_auc": 0.8941,
+        "brier": 0.133,
+        "confusion_matrix": {
+          "tn": 107,
+          "fp": 24,
+          "fn": 23,
+          "tp": 88
+        },
+        "n": 242
+      },
+      "test_metrics_default_threshold": {
+        "threshold": 0.5,
+        "accuracy": 0.8852,
+        "precision": 0.8387,
+        "recall": 0.9286,
+        "sensitivity": 0.9286,
+        "specificity": 0.8485,
+        "f1": 0.8814,
+        "roc_auc": 0.947,
+        "pr_auc": 0.9318,
+        "brier": 0.1066,
+        "confusion_matrix": {
+          "tn": 28,
+          "fp": 5,
+          "fn": 2,
+          "tp": 26
+        },
+        "n": 61
+      }
+    },
+    "XGBoost": {
+      "best_params": {
+        "clf__subsample": 0.8,
+        "clf__scale_pos_weight": 1.18,
+        "clf__reg_lambda": 5.0,
+        "clf__n_estimators": 200,
+        "clf__min_child_weight": 5,
+        "clf__max_depth": 2,
+        "clf__learning_rate": 0.03,
+        "clf__colsample_bytree": 0.7
+      },
+      "search_strategy": "RandomizedSearchCV(60 of 384 combos)",
+      "best_search_score": 0.8997,
+      "search_scoring": "roc_auc",
+      "notes": "Gradient-boosted trees with L2 regularisation; shallow depth (2-4) suits a small tabular dataset.",
+      "oof_metrics": {
+        "threshold": 0.5,
+        "accuracy": 0.8264,
+        "precision": 0.8165,
+        "recall": 0.8018,
+        "sensitivity": 0.8018,
+        "specificity": 0.8473,
+        "f1": 0.8091,
+        "roc_auc": 0.8969,
+        "pr_auc": 0.8988,
+        "brier": 0.1274,
+        "confusion_matrix": {
+          "tn": 111,
+          "fp": 20,
+          "fn": 22,
+          "tp": 89
+        },
+        "n": 242
+      },
+      "test_metrics_default_threshold": {
+        "threshold": 0.5,
+        "accuracy": 0.8689,
+        "precision": 0.8333,
+        "recall": 0.8929,
+        "sensitivity": 0.8929,
+        "specificity": 0.8485,
+        "f1": 0.8621,
+        "roc_auc": 0.9437,
+        "pr_auc": 0.9414,
+        "brier": 0.0994,
+        "confusion_matrix": {
+          "tn": 28,
+          "fp": 5,
+          "fn": 3,
+          "tp": 25
+        },
+        "n": 61
+      }
+    }
+  },
+  "selection": {
+    "rule": "1. Rank by mean cross-validated ROC-AUC on the training split and keep every model within one standard error of the best; at 242 training rows, differences smaller than that are not real. 2. Apply the same one-standard-error filter to PR-AUC, so a model that is clearly weaker on the positive class is dropped. 3. Among the survivors prefer the better-calibrated model, treating Brier differences below 0.01 as ties. 4. Break remaining ties on interpretability - a clinical screening aid has to be explainable - then on the train/test gap, then on fit cost.",
+    "best_cv_roc_auc": {
+      "model": "Logistic Regression",
+      "mean": 0.8976,
+      "std": 0.0432,
+      "standard_error": 0.0086
+    },
+    "roc_auc_one_se_cutoff": 0.889,
+    "pr_auc_one_se_cutoff": 0.8893,
+    "shortlist": [
+      "Logistic Regression",
+      "SVM (Linear)",
+      "SVM (RBF)",
+      "Random Forest",
+      "XGBoost"
+    ],
+    "ranking_within_shortlist": [
+      {
+        "model": "Logistic Regression",
+        "cv_roc_auc": 0.8976,
+        "cv_pr_auc": 0.8938,
+        "cv_brier": 0.1203,
+        "calibration_tie_group": "best",
+        "interpretability_tier": 1,
+        "generalisation_gap": 0.0337,
+        "fit_seconds": 0.04
+      },
+      {
+        "model": "SVM (Linear)",
+        "cv_roc_auc": 0.895,
+        "cv_pr_auc": 0.8935,
+        "cv_brier": 0.1224,
+        "calibration_tie_group": "best",
+        "interpretability_tier": 2,
+        "generalisation_gap": 0.0294,
+        "fit_seconds": 0.05
+      },
+      {
+        "model": "XGBoost",
+        "cv_roc_auc": 0.8954,
+        "cv_pr_auc": 0.8966,
+        "cv_brier": 0.1274,
+        "calibration_tie_group": "best",
+        "interpretability_tier": 3,
+        "generalisation_gap": 0.0552,
+        "fit_seconds": 0.13
+      },
+      {
+        "model": "SVM (RBF)",
+        "cv_roc_auc": 0.8968,
+        "cv_pr_auc": 0.8932,
+        "cv_brier": 0.122,
+        "calibration_tie_group": "best",
+        "interpretability_tier": 4,
+        "generalisation_gap": 0.0247,
+        "fit_seconds": 0.06
+      },
+      {
+        "model": "Random Forest",
+        "cv_roc_auc": 0.8934,
+        "cv_pr_auc": 0.8935,
+        "cv_brier": 0.133,
+        "calibration_tie_group": "worse",
+        "interpretability_tier": 3,
+        "generalisation_gap": 0.0823,
+        "fit_seconds": 0.72
+      }
+    ],
+    "selected": "Logistic Regression",
+    "interpretability_tiers": {
+      "Logistic Regression": 1,
+      "SVM (Linear)": 2,
+      "Random Forest": 3,
+      "XGBoost": 3,
+      "SVM (RBF)": 4
+    }
+  },
+  "imbalance_study": {
+    "train_class_counts": {
+      "0": 131,
+      "1": 111
+    },
+    "imbalance_ratio": 1.18,
+    "minority_share": 0.4587,
+    "stratification": "StratifiedKFold / stratified train-test split used everywhere.",
+    "smote_available": true,
+    "comparison": {
+      "no_resampling": {
+        "roc_auc": {
+          "mean": 0.9069,
+          "std": 0.0177
+        },
+        "recall": {
+          "mean": 0.7656,
+          "std": 0.0451
+        },
+        "f1": {
+          "mean": 0.8136,
+          "std": 0.0098
+        }
+      },
+      "class_weight_balanced": {
+        "roc_auc": {
+          "mean": 0.9082,
+          "std": 0.0184
+        },
+        "recall": {
+          "mean": 0.8281,
+          "std": 0.0542
+        },
+        "f1": {
+          "mean": 0.8444,
+          "std": 0.0264
+        }
+      },
+      "smote_inside_folds": {
+        "roc_auc": {
+          "mean": 0.9086,
+          "std": 0.0177
+        },
+        "recall": {
+          "mean": 0.819,
+          "std": 0.0512
+        },
+        "f1": {
+          "mean": 0.8347,
+          "std": 0.0199
+        }
+      }
+    },
+    "decision": "Training split is only mildly imbalanced (1.18:1, minority 45.9%). SMOTE was evaluated inside the CV folds (never on the whole dataset) and is reported above; it is not used in the final model because it did not improve cross-validated ROC-AUC over stratified sampling, and synthesising patients adds risk without solving a problem this dataset has. Class weighting remains a tunable option in every model's search grid."
+  },
+  "early_stopping": {
+    "available": true,
+    "inner_split": {
+      "fit_rows": 193,
+      "validation_rows": 49
+    },
+    "max_rounds_offered": 1000,
+    "best_iteration": 98,
+    "best_validation_logloss": 0.36844,
+    "early_stopping_rounds": 40,
+    "note": "Early stopping was run on an inner 80/20 split of the training data to find how many boosting rounds this dataset supports before validation loss stops improving. The result informed the small n_estimators values in the tuning grid; the grid search itself uses plain cross-validation so that every candidate is scored the same way."
+  },
+  "error_analysis": {
+    "counts": {
+      "true_positive": 27,
+      "true_negative": 23,
+      "false_positive": 10,
+      "false_negative": 1
+    },
+    "cases": [
+      {
+        "type": "false_negative",
+        "true_label": "Positive",
+        "predicted_label": "Negative",
+        "model_probability": 0.2921,
+        "distance_from_threshold": 0.0879,
+        "top_features": [
+          {
+            "label": "Chest Pain Type",
+            "value": "Non-anginal pain",
+            "direction": "decreases",
+            "share": 0.1816
+          },
+          {
+            "label": "Major Vessels Coloured by Fluoroscopy",
+            "value": "0",
+            "direction": "decreases",
+            "share": 0.1778
+          },
+          {
+            "label": "Thallium Stress Test Result",
+            "value": "Normal",
+            "direction": "decreases",
+            "share": 0.1426
+          },
+          {
+            "label": "Peak Exercise ST Segment Slope",
+            "value": "Flat",
+            "direction": "increases",
+            "share": 0.1176
+          }
+        ]
+      },
+      {
+        "type": "false_positive",
+        "true_label": "Negative",
+        "predicted_label": "Positive",
+        "model_probability": 0.6509,
+        "distance_from_threshold": 0.2709,
+        "top_features": [
+          {
+            "label": "Major Vessels Coloured by Fluoroscopy",
+            "value": "0",
+            "direction": "decreases",
+            "share": 0.2029
+          },
+          {
+            "label": "Chest Pain Type",
+            "value": "Asymptomatic",
+            "direction": "increases",
+            "share": 0.1679
+          },
+          {
+            "label": "Resting Blood Pressure",
+            "value": "160 mm Hg",
+            "direction": "increases",
+            "share": 0.1351
+          },
+          {
+            "label": "Peak Exercise ST Segment Slope",
+            "value": "Upsloping",
+            "direction": "decreases",
+            "share": 0.1251
+          }
+        ]
+      },
+      {
+        "type": "false_positive",
+        "true_label": "Negative",
+        "predicted_label": "Positive",
+        "model_probability": 0.3866,
+        "distance_from_threshold": 0.0066,
+        "top_features": [
+          {
+            "label": "Thallium Stress Test Result",
+            "value": "Reversible defect",
+            "direction": "increases",
+            "share": 0.1995
+          },
+          {
+            "label": "Chest Pain Type",
+            "value": "Non-anginal pain",
+            "direction": "decreases",
+            "share": 0.1773
+          },
+          {
+            "label": "Major Vessels Coloured by Fluoroscopy",
+            "value": "0",
+            "direction": "decreases",
+            "share": 0.1735
+          },
+          {
+            "label": "Peak Exercise ST Segment Slope",
+            "value": "Upsloping",
+            "direction": "decreases",
+            "share": 0.107
+          }
+        ]
+      },
+      {
+        "type": "false_positive",
+        "true_label": "Negative",
+        "predicted_label": "Positive",
+        "model_probability": 0.432,
+        "distance_from_threshold": 0.052,
+        "top_features": [
+          {
+            "label": "Major Vessels Coloured by Fluoroscopy",
+            "value": "0",
+            "direction": "decreases",
+            "share": 0.1787
+          },
+          {
+            "label": "Sex",
+            "value": "Female",
+            "direction": "decreases",
+            "share": 0.1692
+          },
+          {
+            "label": "Chest Pain Type",
+            "value": "Asymptomatic",
+            "direction": "increases",
+            "share": 0.1479
+          },
+          {
+            "label": "Thallium Stress Test Result",
+            "value": "Normal",
+            "direction": "decreases",
+            "share": 0.1434
+          }
+        ]
+      },
+      {
+        "type": "false_positive",
+        "true_label": "Negative",
+        "predicted_label": "Positive",
+        "model_probability": 0.5857,
+        "distance_from_threshold": 0.2057,
+        "top_features": [
+          {
+            "label": "Chest Pain Type",
+            "value": "Typical angina",
+            "direction": "decreases",
+            "share": 0.1747
+          },
+          {
+            "label": "Thallium Stress Test Result",
+            "value": "Normal",
+            "direction": "decreases",
+            "share": 0.1369
+          },
+          {
+            "label": "Resting Blood Pressure",
+            "value": "160 mm Hg",
+            "direction": "increases",
+            "share": 0.1137
+          },
+          {
+            "label": "Peak Exercise ST Segment Slope",
+            "value": "Flat",
+            "direction": "increases",
+            "share": 0.1129
+          }
+        ]
+      },
+      {
+        "type": "false_positive",
+        "true_label": "Negative",
+        "predicted_label": "Positive",
+        "model_probability": 0.7241,
+        "distance_from_threshold": 0.3441,
+        "top_features": [
+          {
+            "label": "Thallium Stress Test Result",
+            "value": "Reversible defect",
+            "direction": "increases",
+            "share": 0.2215
+          },
+          {
+            "label": "Major Vessels Coloured by Fluoroscopy",
+            "value": "0",
+            "direction": "decreases",
+            "share": 0.1927
+          },
+          {
+            "label": "Chest Pain Type",
+            "value": "Asymptomatic",
+            "direction": "increases",
+            "share": 0.1595
+          },
+          {
+            "label": "Peak Exercise ST Segment Slope",
+            "value": "Flat",
+            "direction": "increases",
+            "share": 0.1275
+          }
+        ]
+      },
+      {
+        "type": "false_positive",
+        "true_label": "Negative",
+        "predicted_label": "Positive",
+        "model_probability": 0.6877,
+        "distance_from_threshold": 0.3077,
+        "top_features": [
+          {
+            "label": "Major Vessels Coloured by Fluoroscopy",
+            "value": "3",
+            "direction": "increases",
+            "share": 0.4716
+          },
+          {
+            "label": "Chest Pain Type",
+            "value": "Non-anginal pain",
+            "direction": "decreases",
+            "share": 0.1223
+          },
+          {
+            "label": "Thallium Stress Test Result",
+            "value": "Normal",
+            "direction": "decreases",
+            "share": 0.0961
+          },
+          {
+            "label": "Peak Exercise ST Segment Slope",
+            "value": "Upsloping",
+            "direction": "decreases",
+            "share": 0.0738
+          }
+        ]
+      },
+      {
+        "type": "false_positive",
+        "true_label": "Negative",
+        "predicted_label": "Positive",
+        "model_probability": 0.4538,
+        "distance_from_threshold": 0.0738,
+        "top_features": [
+          {
+            "label": "Major Vessels Coloured by Fluoroscopy",
+            "value": "0",
+            "direction": "decreases",
+            "share": 0.2475
+          },
+          {
+            "label": "Peak Exercise ST Segment Slope",
+            "value": "Flat",
+            "direction": "increases",
+            "share": 0.1638
+          },
+          {
+            "label": "Sex",
+            "value": "Male",
+            "direction": "increases",
+            "share": 0.1093
+          },
+          {
+            "label": "Maximum Heart Rate Achieved",
+            "value": "132 bpm",
+            "direction": "increases",
+            "share": 0.1003
+          }
+        ]
+      },
+      {
+        "type": "false_positive",
+        "true_label": "Negative",
+        "predicted_label": "Positive",
+        "model_probability": 0.5586,
+        "distance_from_threshold": 0.1786,
+        "top_features": [
+          {
+            "label": "Thallium Stress Test Result",
+            "value": "Reversible defect",
+            "direction": "increases",
+            "share": 0.2474
+          },
+          {
+            "label": "Major Vessels Coloured by Fluoroscopy",
+            "value": "not provided",
+            "direction": "decreases",
+            "share": 0.2152
+          },
+          {
+            "label": "Peak Exercise ST Segment Slope",
+            "value": "Flat",
+            "direction": "increases",
+            "share": 0.1424
+          },
+          {
+            "label": "Sex",
+            "value": "Male",
+            "direction": "increases",
+            "share": 0.0951
+          }
+        ]
+      },
+      {
+        "type": "false_positive",
+        "true_label": "Negative",
+        "predicted_label": "Positive",
+        "model_probability": 0.971,
+        "distance_from_threshold": 0.591,
+        "top_features": [
+          {
+            "label": "Major Vessels Coloured by Fluoroscopy",
+            "value": "3",
+            "direction": "increases",
+            "share": 0.4791
+          },
+          {
+            "label": "Thallium Stress Test Result",
+            "value": "Reversible defect",
+            "direction": "increases",
+            "share": 0.1398
+          },
+          {
+            "label": "Chest Pain Type",
+            "value": "Non-anginal pain",
+            "direction": "decreases",
+            "share": 0.1243
+          },
+          {
+            "label": "Peak Exercise ST Segment Slope",
+            "value": "Flat",
+            "direction": "increases",
+            "share": 0.0805
+          }
+        ]
+      },
+      {
+        "type": "false_positive",
+        "true_label": "Negative",
+        "predicted_label": "Positive",
+        "model_probability": 0.4518,
+        "distance_from_threshold": 0.0718,
+        "top_features": [
+          {
+            "label": "Thallium Stress Test Result",
+            "value": "Reversible defect",
+            "direction": "increases",
+            "share": 0.1928
+          },
+          {
+            "label": "Chest Pain Type",
+            "value": "Non-anginal pain",
+            "direction": "decreases",
+            "share": 0.1714
+          },
+          {
+            "label": "Resting Blood Pressure",
+            "value": "94 mm Hg",
+            "direction": "decreases",
+            "share": 0.1422
+          },
+          {
+            "label": "Major Vessels Coloured by Fluoroscopy",
+            "value": "1",
+            "direction": "increases",
+            "share": 0.1084
+          }
+        ]
+      }
+    ],
+    "patterns": [
+      "Mean distance from the 0.38 threshold is 0.199 for wrong predictions versus 0.401 for correct ones - the model is measurably less certain when it errs.",
+      "1 false negatives: mean age 60.0, mean vessels coloured 0.00, mean ST depression 3.00 mm (test-set averages: 54.0, 0.93, 1.20).",
+      "10 false positives: mean age 55.8, mean vessels coloured 0.89, mean ST depression 0.69 mm (test-set averages: 54.0, 0.93, 1.20)."
+    ],
+    "cost_note": "A false negative sends a patient with significant narrowing away without follow-up; a false positive sends a healthy patient to further, sometimes invasive, testing. In screening the first error is normally the more serious one, which is why the operating threshold below is chosen to favour sensitivity rather than left at 0.5.",
+    "predictions_csv": "outputs/predictions/test_predictions.csv"
+  },
+  "explainability": {
+    "encoded_feature_count": 22,
+    "method": [
+      "coefficients",
+      "permutation_importance"
+    ],
+    "shap_available": true,
+    "shap_error": null,
+    "coefficients": [
+      {
+        "encoded": "num__ca",
+        "feature": "ca",
+        "label": "Major Vessels Coloured by Fluoroscopy",
+        "coefficient": 1.0278,
+        "odds_ratio": 2.795
+      },
+      {
+        "encoded": "bin__sex",
+        "feature": "sex",
+        "label": "Sex",
+        "coefficient": 0.9841,
+        "odds_ratio": 2.6755
+      },
+      {
+        "encoded": "nom__thal_3.0",
+        "feature": "thal",
+        "label": "Thallium Stress Test Result: Normal",
+        "coefficient": -0.778,
+        "odds_ratio": 0.4593
+      },
+      {
+        "encoded": "nom__cp_4.0",
+        "feature": "cp",
+        "label": "Chest Pain Type: Asymptomatic",
+        "coefficient": 0.7568,
+        "odds_ratio": 2.1314
+      },
+      {
+        "encoded": "nom__thal_7.0",
+        "feature": "thal",
+        "label": "Thallium Stress Test Result: Reversible defect",
+        "coefficient": 0.6057,
+        "odds_ratio": 1.8326
+      },
+      {
+        "encoded": "nom__slope_1.0",
+        "feature": "slope",
+        "label": "Peak Exercise ST Segment Slope: Upsloping",
+        "coefficient": -0.558,
+        "odds_ratio": 0.5724
+      },
+      {
+        "encoded": "nom__cp_1.0",
+        "feature": "cp",
+        "label": "Chest Pain Type: Typical angina",
+        "coefficient": -0.5557,
+        "odds_ratio": 0.5736
+      },
+      {
+        "encoded": "nom__cp_3.0",
+        "feature": "cp",
+        "label": "Chest Pain Type: Non-anginal pain",
+        "coefficient": -0.5541,
+        "odds_ratio": 0.5746
+      },
+      {
+        "encoded": "bin__exang",
+        "feature": "exang",
+        "label": "Exercise-Induced Angina",
+        "coefficient": 0.4799,
+        "odds_ratio": 1.616
+      },
+      {
+        "encoded": "num__thalach",
+        "feature": "thalach",
+        "label": "Maximum Heart Rate Achieved",
+        "coefficient": -0.3621,
+        "odds_ratio": 0.6962
+      },
+      {
+        "encoded": "nom__slope_2.0",
+        "feature": "slope",
+        "label": "Peak Exercise ST Segment Slope: Flat",
+        "coefficient": 0.3483,
+        "odds_ratio": 1.4166
+      },
+      {
+        "encoded": "nom__restecg_0.0",
+        "feature": "restecg",
+        "label": "Resting ECG Result: Normal",
+        "coefficient": -0.3447,
+        "odds_ratio": 0.7084
+      },
+      {
+        "encoded": "num__trestbps",
+        "feature": "trestbps",
+        "label": "Resting Blood Pressure",
+        "coefficient": 0.286,
+        "odds_ratio": 1.3311
+      },
+      {
+        "encoded": "nom__thal_6.0",
+        "feature": "thal",
+        "label": "Thallium Stress Test Result: Fixed defect",
+        "coefficient": -0.2129,
+        "odds_ratio": 0.8082
+      },
+      {
+        "encoded": "num__oldpeak",
+        "feature": "oldpeak",
+        "label": "ST Depression (Exercise vs Rest)",
+        "coefficient": 0.203,
+        "odds_ratio": 1.225
+      },
+      {
+        "encoded": "nom__slope_3.0",
+        "feature": "slope",
+        "label": "Peak Exercise ST Segment Slope: Downsloping",
+        "coefficient": -0.1755,
+        "odds_ratio": 0.839
+      },
+      {
+        "encoded": "bin__fbs",
+        "feature": "fbs",
+        "label": "Fasting Blood Sugar above 120 mg/dl",
+        "coefficient": -0.1747,
+        "odds_ratio": 0.8397
+      },
+      {
+        "encoded": "num__chol",
+        "feature": "chol",
+        "label": "Serum Cholesterol",
+        "coefficient": 0.1555,
+        "odds_ratio": 1.1682
+      },
+      {
+        "encoded": "num__age",
+        "feature": "age",
+        "label": "Age",
+        "coefficient": -0.0875,
+        "odds_ratio": 0.9162
+      },
+      {
+        "encoded": "nom__restecg_1.0",
+        "feature": "restecg",
+        "label": "Resting ECG Result: ST-T wave abnormality",
+        "coefficient": -0.0645,
+        "odds_ratio": 0.9376
+      },
+      {
+        "encoded": "nom__cp_2.0",
+        "feature": "cp",
+        "label": "Chest Pain Type: Atypical angina",
+        "coefficient": -0.0322,
+        "odds_ratio": 0.9683
+      },
+      {
+        "encoded": "nom__restecg_2.0",
+        "feature": "restecg",
+        "label": "Resting ECG Result: Left ventricular hypertrophy",
+        "coefficient": 0.024,
+        "odds_ratio": 1.0243
+      }
+    ],
+    "coefficient_note": "Numeric features are standardised before fitting, so coefficients are comparable across features. An odds ratio above 1 means the model raises its estimated odds as that encoded feature increases.",
+    "permutation_importance": [
+      {
+        "feature": "ca",
+        "label": "Major Vessels Coloured by Fluoroscopy",
+        "mean_drop_in_roc_auc": 0.08856,
+        "std": 0.0339
+      },
+      {
+        "feature": "cp",
+        "label": "Chest Pain Type",
+        "mean_drop_in_roc_auc": 0.03084,
+        "std": 0.0111
+      },
+      {
+        "feature": "thal",
+        "label": "Thallium Stress Test Result",
+        "mean_drop_in_roc_auc": 0.01392,
+        "std": 0.00924
+      },
+      {
+        "feature": "slope",
+        "label": "Peak Exercise ST Segment Slope",
+        "mean_drop_in_roc_auc": 0.01259,
+        "std": 0.00831
+      },
+      {
+        "feature": "oldpeak",
+        "label": "ST Depression (Exercise vs Rest)",
+        "mean_drop_in_roc_auc": 0.01032,
+        "std": 0.0043
+      },
+      {
+        "feature": "thalach",
+        "label": "Maximum Heart Rate Achieved",
+        "mean_drop_in_roc_auc": 0.0096,
+        "std": 0.00765
+      },
+      {
+        "feature": "exang",
+        "label": "Exercise-Induced Angina",
+        "mean_drop_in_roc_auc": 0.00916,
+        "std": 0.00312
+      },
+      {
+        "feature": "trestbps",
+        "label": "Resting Blood Pressure",
+        "mean_drop_in_roc_auc": 0.00725,
+        "std": 0.00577
+      },
+      {
+        "feature": "sex",
+        "label": "Sex",
+        "mean_drop_in_roc_auc": 0.00368,
+        "std": 0.00773
+      },
+      {
+        "feature": "restecg",
+        "label": "Resting ECG Result",
+        "mean_drop_in_roc_auc": 0.00238,
+        "std": 0.00385
+      },
+      {
+        "feature": "age",
+        "label": "Age",
+        "mean_drop_in_roc_auc": 0.00209,
+        "std": 0.00131
+      },
+      {
+        "feature": "fbs",
+        "label": "Fasting Blood Sugar above 120 mg/dl",
+        "mean_drop_in_roc_auc": 0.00025,
+        "std": 0.00147
+      },
+      {
+        "feature": "chol",
+        "label": "Serum Cholesterol",
+        "mean_drop_in_roc_auc": -0.00162,
+        "std": 0.00225
+      }
+    ],
+    "permutation_note": "Permutation importance shuffles one raw input column of the held-out test set and measures how much test ROC-AUC drops. A larger drop means the model leaned on that column more.",
+    "shap_summary": {
+      "available": true,
+      "model": "XGBoost",
+      "explainer": "shap.TreeExplainer (exact TreeSHAP)",
+      "rows_explained": 242,
+      "by_encoded_feature": [
+        {
+          "label": "Major Vessels Coloured by Fluoroscopy",
+          "mean_abs_shap": 0.58559
+        },
+        {
+          "label": "Chest Pain Type: Asymptomatic",
+          "mean_abs_shap": 0.58242
+        },
+        {
+          "label": "Thallium Stress Test Result: Normal",
+          "mean_abs_shap": 0.41042
+        },
+        {
+          "label": "Thallium Stress Test Result: Reversible defect",
+          "mean_abs_shap": 0.32066
+        },
+        {
+          "label": "Sex",
+          "mean_abs_shap": 0.27413
+        },
+        {
+          "label": "ST Depression (Exercise vs Rest)",
+          "mean_abs_shap": 0.21416
+        },
+        {
+          "label": "Age",
+          "mean_abs_shap": 0.15785
+        },
+        {
+          "label": "Maximum Heart Rate Achieved",
+          "mean_abs_shap": 0.15557
+        },
+        {
+          "label": "Serum Cholesterol",
+          "mean_abs_shap": 0.14027
+        },
+        {
+          "label": "Peak Exercise ST Segment Slope: Upsloping",
+          "mean_abs_shap": 0.12987
+        },
+        {
+          "label": "Exercise-Induced Angina",
+          "mean_abs_shap": 0.11979
+        },
+        {
+          "label": "Peak Exercise ST Segment Slope: Flat",
+          "mean_abs_shap": 0.11619
+        },
+        {
+          "label": "Resting ECG Result: Normal",
+          "mean_abs_shap": 0.06962
+        },
+        {
+          "label": "Resting Blood Pressure",
+          "mean_abs_shap": 0.0403
+        },
+        {
+          "label": "Resting ECG Result: Left ventricular hypertrophy",
+          "mean_abs_shap": 0.03835
+        }
+      ],
+      "by_feature": [
+        {
+          "feature": "thal",
+          "label": "Thallium Stress Test Result",
+          "value": 0.73107
+        },
+        {
+          "feature": "cp",
+          "label": "Chest Pain Type",
+          "value": 0.60294
+        },
+        {
+          "feature": "ca",
+          "label": "Major Vessels Coloured by Fluoroscopy",
+          "value": 0.58559
+        },
+        {
+          "feature": "sex",
+          "label": "Sex",
+          "value": 0.27413
+        },
+        {
+          "feature": "slope",
+          "label": "Peak Exercise ST Segment Slope",
+          "value": 0.24607
+        },
+        {
+          "feature": "oldpeak",
+          "label": "ST Depression (Exercise vs Rest)",
+          "value": 0.21416
+        },
+        {
+          "feature": "age",
+          "label": "Age",
+          "value": 0.15785
+        },
+        {
+          "feature": "thalach",
+          "label": "Maximum Heart Rate Achieved",
+          "value": 0.15557
+        },
+        {
+          "feature": "chol",
+          "label": "Serum Cholesterol",
+          "value": 0.14027
+        },
+        {
+          "feature": "exang",
+          "label": "Exercise-Induced Angina",
+          "value": 0.11979
+        },
+        {
+          "feature": "restecg",
+          "label": "Resting ECG Result",
+          "value": 0.10797
+        },
+        {
+          "feature": "trestbps",
+          "label": "Resting Blood Pressure",
+          "value": 0.0403
+        },
+        {
+          "feature": "fbs",
+          "label": "Fasting Blood Sugar above 120 mg/dl",
+          "value": 0.0
+        }
+      ],
+      "note": "Mean absolute SHAP value per feature across the training split, in log-odds units. It measures how much each input moves this model's output, not medical causation."
+    }
+  },
+  "eda": {
+    "class_balance": {
+      "counts": {
+        "0": 164,
+        "1": 139
+      },
+      "minority_share": 0.4587,
+      "imbalance_ratio": 1.18,
+      "reading": "Near balanced (1.18:1). Heavy re-sampling such as SMOTE is not indicated; stratified splits plus optional class weights are enough."
+    },
+    "numeric_separation": {
+      "age": {
+        "mean_negative": 52.59,
+        "mean_positive": 56.63,
+        "cohens_d": 0.461
+      },
+      "trestbps": {
+        "mean_negative": 129.25,
+        "mean_positive": 134.57,
+        "cohens_d": 0.303
+      },
+      "chol": {
+        "mean_negative": 242.64,
+        "mean_positive": 251.47,
+        "cohens_d": 0.172
+      },
+      "thalach": {
+        "mean_negative": 158.38,
+        "mean_positive": 139.26,
+        "cohens_d": -0.912
+      },
+      "oldpeak": {
+        "mean_negative": 0.59,
+        "mean_positive": 1.57,
+        "cohens_d": 0.919
+      },
+      "ca": {
+        "mean_negative": 0.27,
+        "mean_positive": 1.14,
+        "cohens_d": 1.019
+      }
+    },
+    "target_correlation": {
+      "thal": 0.526,
+      "ca": 0.46,
+      "exang": 0.432,
+      "oldpeak": 0.425,
+      "thalach": -0.417,
+      "cp": 0.414,
+      "slope": 0.339,
+      "sex": 0.277,
+      "age": 0.223,
+      "restecg": 0.169,
+      "trestbps": 0.151,
+      "chol": 0.085,
+      "fbs": 0.025
+    },
+    "strongest_feature_pairs": {
+      "oldpeak ~ slope": 0.578,
+      "age ~ thalach": 0.394,
+      "thalach ~ slope": 0.386
+    },
+    "categorical_positive_rates": {
+      "cp": {
+        "Typical angina": 0.304,
+        "Atypical angina": 0.18,
+        "Non-anginal pain": 0.209,
+        "Asymptomatic": 0.729
+      },
+      "restecg": {
+        "Normal": 0.371,
+        "ST-T wave abnormality": 0.75,
+        "Left ventricular hypertrophy": 0.541
+      },
+      "slope": {
+        "Upsloping": 0.254,
+        "Flat": 0.65,
+        "Downsloping": 0.571
+      },
+      "thal": {
+        "Normal": 0.223,
+        "Fixed defect": 0.667,
+        "Reversible defect": 0.761
+      },
+      "sex": {
+        "Female": 0.258,
+        "Male": 0.553
+      },
+      "exang": {
+        "No": 0.309,
+        "Yes": 0.768
+      },
+      "fbs": {
+        "No": 0.453,
+        "Yes": 0.489
+      }
+    },
+    "missing_per_column": {
+      "ca": 4,
+      "thal": 2
+    }
+  }
+}

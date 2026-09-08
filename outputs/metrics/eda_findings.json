@@ -1,0 +1,112 @@
+{
+  "figures": {
+    "target_distribution": "outputs/figures/01_target_distribution.png",
+    "numeric_distributions": "outputs/figures/02_numeric_distributions.png",
+    "boxplots": "outputs/figures/03_boxplots_by_target.png",
+    "correlation": "outputs/figures/04_correlation_heatmap.png",
+    "categorical_rates": "outputs/figures/05_categorical_outcome_rates.png",
+    "missingness": "outputs/figures/06_missingness.png"
+  },
+  "insights": {
+    "class_balance": {
+      "counts": {
+        "0": 164,
+        "1": 139
+      },
+      "minority_share": 0.4587,
+      "imbalance_ratio": 1.18,
+      "reading": "Near balanced (1.18:1). Heavy re-sampling such as SMOTE is not indicated; stratified splits plus optional class weights are enough."
+    },
+    "numeric_separation": {
+      "age": {
+        "mean_negative": 52.59,
+        "mean_positive": 56.63,
+        "cohens_d": 0.461
+      },
+      "trestbps": {
+        "mean_negative": 129.25,
+        "mean_positive": 134.57,
+        "cohens_d": 0.303
+      },
+      "chol": {
+        "mean_negative": 242.64,
+        "mean_positive": 251.47,
+        "cohens_d": 0.172
+      },
+      "thalach": {
+        "mean_negative": 158.38,
+        "mean_positive": 139.26,
+        "cohens_d": -0.912
+      },
+      "oldpeak": {
+        "mean_negative": 0.59,
+        "mean_positive": 1.57,
+        "cohens_d": 0.919
+      },
+      "ca": {
+        "mean_negative": 0.27,
+        "mean_positive": 1.14,
+        "cohens_d": 1.019
+      }
+    },
+    "target_correlation": {
+      "thal": 0.526,
+      "ca": 0.46,
+      "exang": 0.432,
+      "oldpeak": 0.425,
+      "thalach": -0.417,
+      "cp": 0.414,
+      "slope": 0.339,
+      "sex": 0.277,
+      "age": 0.223,
+      "restecg": 0.169,
+      "trestbps": 0.151,
+      "chol": 0.085,
+      "fbs": 0.025
+    },
+    "strongest_feature_pairs": {
+      "oldpeak ~ slope": 0.578,
+      "age ~ thalach": 0.394,
+      "thalach ~ slope": 0.386
+    },
+    "categorical_positive_rates": {
+      "cp": {
+        "Typical angina": 0.304,
+        "Atypical angina": 0.18,
+        "Non-anginal pain": 0.209,
+        "Asymptomatic": 0.729
+      },
+      "restecg": {
+        "Normal": 0.371,
+        "ST-T wave abnormality": 0.75,
+        "Left ventricular hypertrophy": 0.541
+      },
+      "slope": {
+        "Upsloping": 0.254,
+        "Flat": 0.65,
+        "Downsloping": 0.571
+      },
+      "thal": {
+        "Normal": 0.223,
+        "Fixed defect": 0.667,
+        "Reversible defect": 0.761
+      },
+      "sex": {
+        "Female": 0.258,
+        "Male": 0.553
+      },
+      "exang": {
+        "No": 0.309,
+        "Yes": 0.768
+      },
+      "fbs": {
+        "No": 0.453,
+        "Yes": 0.489
+      }
+    },
+    "missing_per_column": {
+      "ca": 4,
+      "thal": 2
+    }
+  }
+}

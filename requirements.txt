@@ -1,0 +1,24 @@
+# Disease Risk Prediction - pinned to the versions this project was built and
+# verified against (Python 3.14 on Windows 11).
+
+# --- data & modelling -------------------------------------------------------
+numpy==2.5.2
+pandas==3.0.5
+scikit-learn==1.9.0
+scipy==1.18.1
+xgboost==3.4.1
+imbalanced-learn==0.14.2
+shap==0.52.0
+joblib==1.6.0
+
+# --- figures ----------------------------------------------------------------
+matplotlib==3.11.1
+
+# --- API --------------------------------------------------------------------
+fastapi==0.141.1
+uvicorn==0.52.4
+pydantic==2.13.5
+
+# --- testing ----------------------------------------------------------------
+pytest==9.1.1
+httpx==0.28.1

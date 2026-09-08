@@ -1,0 +1,380 @@
+{
+  "counts": {
+    "true_positive": 27,
+    "true_negative": 23,
+    "false_positive": 10,
+    "false_negative": 1
+  },
+  "cases": [
+    {
+      "type": "false_negative",
+      "true_label": "Positive",
+      "predicted_label": "Negative",
+      "model_probability": 0.2921,
+      "distance_from_threshold": 0.0879,
+      "top_features": [
+        {
+          "label": "Chest Pain Type",
+          "value": "Non-anginal pain",
+          "direction": "decreases",
+          "share": 0.1816
+        },
+        {
+          "label": "Major Vessels Coloured by Fluoroscopy",
+          "value": "0",
+          "direction": "decreases",
+          "share": 0.1778
+        },
+        {
+          "label": "Thallium Stress Test Result",
+          "value": "Normal",
+          "direction": "decreases",
+          "share": 0.1426
+        },
+        {
+          "label": "Peak Exercise ST Segment Slope",
+          "value": "Flat",
+          "direction": "increases",
+          "share": 0.1176
+        }
+      ]
+    },
+    {
+      "type": "false_positive",
+      "true_label": "Negative",
+      "predicted_label": "Positive",
+      "model_probability": 0.6509,
+      "distance_from_threshold": 0.2709,
+      "top_features": [
+        {
+          "label": "Major Vessels Coloured by Fluoroscopy",
+          "value": "0",
+          "direction": "decreases",
+          "share": 0.2029
+        },
+        {
+          "label": "Chest Pain Type",
+          "value": "Asymptomatic",
+          "direction": "increases",
+          "share": 0.1679
+        },
+        {
+          "label": "Resting Blood Pressure",
+          "value": "160 mm Hg",
+          "direction": "increases",
+          "share": 0.1351
+        },
+        {
+          "label": "Peak Exercise ST Segment Slope",
+          "value": "Upsloping",
+          "direction": "decreases",
+          "share": 0.1251
+        }
+      ]
+    },
+    {
+      "type": "false_positive",
+      "true_label": "Negative",
+      "predicted_label": "Positive",
+      "model_probability": 0.3866,
+      "distance_from_threshold": 0.0066,
+      "top_features": [
+        {
+          "label": "Thallium Stress Test Result",
+          "value": "Reversible defect",
+          "direction": "increases",
+          "share": 0.1995
+        },
+        {
+          "label": "Chest Pain Type",
+          "value": "Non-anginal pain",
+          "direction": "decreases",
+          "share": 0.1773
+        },
+        {
+          "label": "Major Vessels Coloured by Fluoroscopy",
+          "value": "0",
+          "direction": "decreases",
+          "share": 0.1735
+        },
+        {
+          "label": "Peak Exercise ST Segment Slope",
+          "value": "Upsloping",
+          "direction": "decreases",
+          "share": 0.107
+        }
+      ]
+    },
+    {
+      "type": "false_positive",
+      "true_label": "Negative",
+      "predicted_label": "Positive",
+      "model_probability": 0.432,
+      "distance_from_threshold": 0.052,
+      "top_features": [
+        {
+          "label": "Major Vessels Coloured by Fluoroscopy",
+          "value": "0",
+          "direction": "decreases",
+          "share": 0.1787
+        },
+        {
+          "label": "Sex",
+          "value": "Female",
+          "direction": "decreases",
+          "share": 0.1692
+        },
+        {
+          "label": "Chest Pain Type",
+          "value": "Asymptomatic",
+          "direction": "increases",
+          "share": 0.1479
+        },
+        {
+          "label": "Thallium Stress Test Result",
+          "value": "Normal",
+          "direction": "decreases",
+          "share": 0.1434
+        }
+      ]
+    },
+    {
+      "type": "false_positive",
+      "true_label": "Negative",
+      "predicted_label": "Positive",
+      "model_probability": 0.5857,
+      "distance_from_threshold": 0.2057,
+      "top_features": [
+        {
+          "label": "Chest Pain Type",
+          "value": "Typical angina",
+          "direction": "decreases",
+          "share": 0.1747
+        },
+        {
+          "label": "Thallium Stress Test Result",
+          "value": "Normal",
+          "direction": "decreases",
+          "share": 0.1369
+        },
+        {
+          "label": "Resting Blood Pressure",
+          "value": "160 mm Hg",
+          "direction": "increases",
+          "share": 0.1137
+        },
+        {
+          "label": "Peak Exercise ST Segment Slope",
+          "value": "Flat",
+          "direction": "increases",
+          "share": 0.1129
+        }
+      ]
+    },
+    {
+      "type": "false_positive",
+      "true_label": "Negative",
+      "predicted_label": "Positive",
+      "model_probability": 0.7241,
+      "distance_from_threshold": 0.3441,
+      "top_features": [
+        {
+          "label": "Thallium Stress Test Result",
+          "value": "Reversible defect",
+          "direction": "increases",
+          "share": 0.2215
+        },
+        {
+          "label": "Major Vessels Coloured by Fluoroscopy",
+          "value": "0",
+          "direction": "decreases",
+          "share": 0.1927
+        },
+        {
+          "label": "Chest Pain Type",
+          "value": "Asymptomatic",
+          "direction": "increases",
+          "share": 0.1595
+        },
+        {
+          "label": "Peak Exercise ST Segment Slope",
+          "value": "Flat",
+          "direction": "increases",
+          "share": 0.1275
+        }
+      ]
+    },
+    {
+      "type": "false_positive",
+      "true_label": "Negative",
+      "predicted_label": "Positive",
+      "model_probability": 0.6877,
+      "distance_from_threshold": 0.3077,
+      "top_features": [
+        {
+          "label": "Major Vessels Coloured by Fluoroscopy",
+          "value": "3",
+          "direction": "increases",
+          "share": 0.4716
+        },
+        {
+          "label": "Chest Pain Type",
+          "value": "Non-anginal pain",
+          "direction": "decreases",
+          "share": 0.1223
+        },
+        {
+          "label": "Thallium Stress Test Result",
+          "value": "Normal",
+          "direction": "decreases",
+          "share": 0.0961
+        },
+        {
+          "label": "Peak Exercise ST Segment Slope",
+          "value": "Upsloping",
+          "direction": "decreases",
+          "share": 0.0738
+        }
+      ]
+    },
+    {
+      "type": "false_positive",
+      "true_label": "Negative",
+      "predicted_label": "Positive",
+      "model_probability": 0.4538,
+      "distance_from_threshold": 0.0738,
+      "top_features": [
+        {
+          "label": "Major Vessels Coloured by Fluoroscopy",
+          "value": "0",
+          "direction": "decreases",
+          "share": 0.2475
+        },
+        {
+          "label": "Peak Exercise ST Segment Slope",
+          "value": "Flat",
+          "direction": "increases",
+          "share": 0.1638
+        },
+        {
+          "label": "Sex",
+          "value": "Male",
+          "direction": "increases",
+          "share": 0.1093
+        },
+        {
+          "label": "Maximum Heart Rate Achieved",
+          "value": "132 bpm",
+          "direction": "increases",
+          "share": 0.1003
+        }
+      ]
+    },
+    {
+      "type": "false_positive",
+      "true_label": "Negative",
+      "predicted_label": "Positive",
+      "model_probability": 0.5586,
+      "distance_from_threshold": 0.1786,
+      "top_features": [
+        {
+          "label": "Thallium Stress Test Result",
+          "value": "Reversible defect",
+          "direction": "increases",
+          "share": 0.2474
+        },
+        {
+          "label": "Major Vessels Coloured by Fluoroscopy",
+          "value": "not provided",
+          "direction": "decreases",
+          "share": 0.2152
+        },
+        {
+          "label": "Peak Exercise ST Segment Slope",
+          "value": "Flat",
+          "direction": "increases",
+          "share": 0.1424
+        },
+        {
+          "label": "Sex",
+          "value": "Male",
+          "direction": "increases",
+          "share": 0.0951
+        }
+      ]
+    },
+    {
+      "type": "false_positive",
+      "true_label": "Negative",
+      "predicted_label": "Positive",
+      "model_probability": 0.971,
+      "distance_from_threshold": 0.591,
+      "top_features": [
+        {
+          "label": "Major Vessels Coloured by Fluoroscopy",
+          "value": "3",
+          "direction": "increases",
+          "share": 0.4791
+        },
+        {
+          "label": "Thallium Stress Test Result",
+          "value": "Reversible defect",
+          "direction": "increases",
+          "share": 0.1398
+        },
+        {
+          "label": "Chest Pain Type",
+          "value": "Non-anginal pain",
+          "direction": "decreases",
+          "share": 0.1243
+        },
+        {
+          "label": "Peak Exercise ST Segment Slope",
+          "value": "Flat",
+          "direction": "increases",
+          "share": 0.0805
+        }
+      ]
+    },
+    {
+      "type": "false_positive",
+      "true_label": "Negative",
+      "predicted_label": "Positive",
+      "model_probability": 0.4518,
+      "distance_from_threshold": 0.0718,
+      "top_features": [
+        {
+          "label": "Thallium Stress Test Result",
+          "value": "Reversible defect",
+          "direction": "increases",
+          "share": 0.1928
+        },
+        {
+          "label": "Chest Pain Type",
+          "value": "Non-anginal pain",
+          "direction": "decreases",
+          "share": 0.1714
+        },
+        {
+          "label": "Resting Blood Pressure",
+          "value": "94 mm Hg",
+          "direction": "decreases",
+          "share": 0.1422
+        },
+        {
+          "label": "Major Vessels Coloured by Fluoroscopy",
+          "value": "1",
+          "direction": "increases",
+          "share": 0.1084
+        }
+      ]
+    }
+  ],
+  "patterns": [
+    "Mean distance from the 0.38 threshold is 0.199 for wrong predictions versus 0.401 for correct ones - the model is measurably less certain when it errs.",
+    "1 false negatives: mean age 60.0, mean vessels coloured 0.00, mean ST depression 3.00 mm (test-set averages: 54.0, 0.93, 1.20).",
+    "10 false positives: mean age 55.8, mean vessels coloured 0.89, mean ST depression 0.69 mm (test-set averages: 54.0, 0.93, 1.20)."
+  ],
+  "cost_note": "A false negative sends a patient with significant narrowing away without follow-up; a false positive sends a healthy patient to further, sometimes invasive, testing. In screening the first error is normally the more serious one, which is why the operating threshold below is chosen to favour sensitivity rather than left at 0.5.",
+  "predictions_csv": "outputs/predictions/test_predictions.csv"
+}

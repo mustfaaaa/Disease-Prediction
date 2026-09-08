@@ -1,0 +1,259 @@
+{
+  "n_rows": 303,
+  "n_cols": 14,
+  "duplicate_rows": 0,
+  "dtypes": {
+    "age": "float64",
+    "sex": "float64",
+    "cp": "float64",
+    "exang": "float64",
+    "trestbps": "float64",
+    "chol": "float64",
+    "fbs": "float64",
+    "restecg": "float64",
+    "thalach": "float64",
+    "oldpeak": "float64",
+    "slope": "float64",
+    "ca": "float64",
+    "thal": "float64",
+    "target": "int64"
+  },
+  "missing_per_column": {
+    "age": 0,
+    "sex": 0,
+    "cp": 0,
+    "exang": 0,
+    "trestbps": 0,
+    "chol": 0,
+    "fbs": 0,
+    "restecg": 0,
+    "thalach": 0,
+    "oldpeak": 0,
+    "slope": 0,
+    "ca": 4,
+    "thal": 2,
+    "target": 0
+  },
+  "columns": {
+    "age": {
+      "dtype": "float64",
+      "missing": 0,
+      "n_unique": 41,
+      "min": 29.0,
+      "max": 77.0,
+      "mean": 54.4389,
+      "std": 9.0387,
+      "median": 56.0,
+      "q1": 48.0,
+      "q3": 61.0
+    },
+    "sex": {
+      "dtype": "float64",
+      "missing": 0,
+      "n_unique": 2,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.6799,
+      "std": 0.4673,
+      "median": 1.0,
+      "q1": 0.0,
+      "q3": 1.0,
+      "unique_values": [
+        0.0,
+        1.0
+      ]
+    },
+    "cp": {
+      "dtype": "float64",
+      "missing": 0,
+      "n_unique": 4,
+      "min": 1.0,
+      "max": 4.0,
+      "mean": 3.1584,
+      "std": 0.9601,
+      "median": 3.0,
+      "q1": 3.0,
+      "q3": 4.0,
+      "unique_values": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ]
+    },
+    "exang": {
+      "dtype": "float64",
+      "missing": 0,
+      "n_unique": 2,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.3267,
+      "std": 0.4698,
+      "median": 0.0,
+      "q1": 0.0,
+      "q3": 1.0,
+      "unique_values": [
+        0.0,
+        1.0
+      ]
+    },
+    "trestbps": {
+      "dtype": "float64",
+      "missing": 0,
+      "n_unique": 50,
+      "min": 94.0,
+      "max": 200.0,
+      "mean": 131.6898,
+      "std": 17.5997,
+      "median": 130.0,
+      "q1": 120.0,
+      "q3": 140.0
+    },
+    "chol": {
+      "dtype": "float64",
+      "missing": 0,
+      "n_unique": 152,
+      "min": 126.0,
+      "max": 564.0,
+      "mean": 246.6931,
+      "std": 51.7769,
+      "median": 241.0,
+      "q1": 211.0,
+      "q3": 275.0
+    },
+    "fbs": {
+      "dtype": "float64",
+      "missing": 0,
+      "n_unique": 2,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.1485,
+      "std": 0.3562,
+      "median": 0.0,
+      "q1": 0.0,
+      "q3": 0.0,
+      "unique_values": [
+        0.0,
+        1.0
+      ]
+    },
+    "restecg": {
+      "dtype": "float64",
+      "missing": 0,
+      "n_unique": 3,
+      "min": 0.0,
+      "max": 2.0,
+      "mean": 0.9901,
+      "std": 0.995,
+      "median": 1.0,
+      "q1": 0.0,
+      "q3": 2.0,
+      "unique_values": [
+        0.0,
+        1.0,
+        2.0
+      ]
+    },
+    "thalach": {
+      "dtype": "float64",
+      "missing": 0,
+      "n_unique": 91,
+      "min": 71.0,
+      "max": 202.0,
+      "mean": 149.6073,
+      "std": 22.875,
+      "median": 153.0,
+      "q1": 133.5,
+      "q3": 166.0
+    },
+    "oldpeak": {
+      "dtype": "float64",
+      "missing": 0,
+      "n_unique": 40,
+      "min": 0.0,
+      "max": 6.2,
+      "mean": 1.0396,
+      "std": 1.1611,
+      "median": 0.8,
+      "q1": 0.0,
+      "q3": 1.6
+    },
+    "slope": {
+      "dtype": "float64",
+      "missing": 0,
+      "n_unique": 3,
+      "min": 1.0,
+      "max": 3.0,
+      "mean": 1.6007,
+      "std": 0.6162,
+      "median": 2.0,
+      "q1": 1.0,
+      "q3": 2.0,
+      "unique_values": [
+        1.0,
+        2.0,
+        3.0
+      ]
+    },
+    "ca": {
+      "dtype": "float64",
+      "missing": 4,
+      "n_unique": 4,
+      "min": 0.0,
+      "max": 3.0,
+      "mean": 0.6722,
+      "std": 0.9374,
+      "median": 0.0,
+      "q1": 0.0,
+      "q3": 1.0,
+      "unique_values": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ]
+    },
+    "thal": {
+      "dtype": "float64",
+      "missing": 2,
+      "n_unique": 3,
+      "min": 3.0,
+      "max": 7.0,
+      "mean": 4.7342,
+      "std": 1.9397,
+      "median": 3.0,
+      "q1": 3.0,
+      "q3": 7.0,
+      "unique_values": [
+        3.0,
+        6.0,
+        7.0
+      ]
+    },
+    "target": {
+      "dtype": "int64",
+      "missing": 0,
+      "n_unique": 2,
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.4587,
+      "std": 0.4991,
+      "median": 0.0,
+      "q1": 0.0,
+      "q3": 1.0,
+      "unique_values": [
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "target_counts": {
+    "0": 164,
+    "1": 139
+  },
+  "target_share": {
+    "0": 0.5413,
+    "1": 0.4587
+  },
+  "imbalance_ratio": 1.18
+}

@@ -1,0 +1,55 @@
+{
+  "train_class_counts": {
+    "0": 131,
+    "1": 111
+  },
+  "imbalance_ratio": 1.18,
+  "minority_share": 0.4587,
+  "stratification": "StratifiedKFold / stratified train-test split used everywhere.",
+  "smote_available": true,
+  "comparison": {
+    "no_resampling": {
+      "roc_auc": {
+        "mean": 0.9069,
+        "std": 0.0177
+      },
+      "recall": {
+        "mean": 0.7656,
+        "std": 0.0451
+      },
+      "f1": {
+        "mean": 0.8136,
+        "std": 0.0098
+      }
+    },
+    "class_weight_balanced": {
+      "roc_auc": {
+        "mean": 0.9082,
+        "std": 0.0184
+      },
+      "recall": {
+        "mean": 0.8281,
+        "std": 0.0542
+      },
+      "f1": {
+        "mean": 0.8444,
+        "std": 0.0264
+      }
+    },
+    "smote_inside_folds": {
+      "roc_auc": {
+        "mean": 0.9086,
+        "std": 0.0177
+      },
+      "recall": {
+        "mean": 0.819,
+        "std": 0.0512
+      },
+      "f1": {
+        "mean": 0.8347,
+        "std": 0.0199
+      }
+    }
+  },
+  "decision": "Training split is only mildly imbalanced (1.18:1, minority 45.9%). SMOTE was evaluated inside the CV folds (never on the whole dataset) and is reported above; it is not used in the final model because it did not improve cross-validated ROC-AUC over stratified sampling, and synthesising patients adds risk without solving a problem this dataset has. Class weighting remains a tunable option in every model's search grid."
+}

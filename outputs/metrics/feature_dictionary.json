@@ -1,0 +1,119 @@
+[
+  {
+    "feature": "age",
+    "ui_label": "Age",
+    "type": "numeric",
+    "meaning": "Patient age in whole years.",
+    "units": "years",
+    "domain": "18 - 100",
+    "group": "Patient Information"
+  },
+  {
+    "feature": "sex",
+    "ui_label": "Sex",
+    "type": "binary",
+    "meaning": "Biological sex as recorded in the dataset (1 = male, 0 = female).",
+    "units": "-",
+    "domain": "0 = Female, 1 = Male",
+    "group": "Patient Information"
+  },
+  {
+    "feature": "cp",
+    "ui_label": "Chest Pain Type",
+    "type": "nominal",
+    "meaning": "Category of chest pain reported at admission.",
+    "units": "-",
+    "domain": "1 = Typical angina, 2 = Atypical angina, 3 = Non-anginal pain, 4 = Asymptomatic",
+    "group": "Symptoms"
+  },
+  {
+    "feature": "exang",
+    "ui_label": "Exercise-Induced Angina",
+    "type": "binary",
+    "meaning": "Whether chest pain was provoked by the exercise test.",
+    "units": "-",
+    "domain": "0 = No, 1 = Yes",
+    "group": "Symptoms"
+  },
+  {
+    "feature": "trestbps",
+    "ui_label": "Resting Blood Pressure",
+    "type": "numeric",
+    "meaning": "Resting systolic blood pressure on admission to hospital.",
+    "units": "mm Hg",
+    "domain": "80 - 220",
+    "group": "Vitals & Blood Tests"
+  },
+  {
+    "feature": "chol",
+    "ui_label": "Serum Cholesterol",
+    "type": "numeric",
+    "meaning": "Total serum cholesterol measured from a blood sample.",
+    "units": "mg/dl",
+    "domain": "100 - 600",
+    "group": "Vitals & Blood Tests"
+  },
+  {
+    "feature": "fbs",
+    "ui_label": "Fasting Blood Sugar above 120 mg/dl",
+    "type": "binary",
+    "meaning": "Whether fasting blood sugar exceeded 120 mg/dl.",
+    "units": "-",
+    "domain": "0 = No, 1 = Yes",
+    "group": "Vitals & Blood Tests"
+  },
+  {
+    "feature": "restecg",
+    "ui_label": "Resting ECG Result",
+    "type": "nominal",
+    "meaning": "Resting electrocardiographic findings.",
+    "units": "-",
+    "domain": "0 = Normal, 1 = ST-T wave abnormality, 2 = Left ventricular hypertrophy",
+    "group": "ECG & Exercise Test"
+  },
+  {
+    "feature": "thalach",
+    "ui_label": "Maximum Heart Rate Achieved",
+    "type": "numeric",
+    "meaning": "Highest heart rate reached during the exercise test.",
+    "units": "bpm",
+    "domain": "60 - 220",
+    "group": "ECG & Exercise Test"
+  },
+  {
+    "feature": "oldpeak",
+    "ui_label": "ST Depression (Exercise vs Rest)",
+    "type": "numeric",
+    "meaning": "ST-segment depression induced by exercise, relative to rest.",
+    "units": "mm",
+    "domain": "0 - 7",
+    "group": "ECG & Exercise Test"
+  },
+  {
+    "feature": "slope",
+    "ui_label": "Peak Exercise ST Segment Slope",
+    "type": "nominal",
+    "meaning": "Slope of the ST segment at peak exercise.",
+    "units": "-",
+    "domain": "1 = Upsloping, 2 = Flat, 3 = Downsloping",
+    "group": "ECG & Exercise Test"
+  },
+  {
+    "feature": "ca",
+    "ui_label": "Major Vessels Coloured by Fluoroscopy",
+    "type": "numeric",
+    "meaning": "Number of major vessels (0-3) made visible by fluoroscopy.",
+    "units": "count",
+    "domain": "0 - 3",
+    "group": "Imaging"
+  },
+  {
+    "feature": "thal",
+    "ui_label": "Thallium Stress Test Result",
+    "type": "nominal",
+    "meaning": "Result of the thallium myocardial perfusion scan.",
+    "units": "-",
+    "domain": "3 = Normal, 6 = Fixed defect, 7 = Reversible defect",
+    "group": "Imaging"
+  }
+]

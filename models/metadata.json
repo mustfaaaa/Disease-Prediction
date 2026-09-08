@@ -1,0 +1,91 @@
+{
+  "project": "Disease Risk Prediction - Heart Disease Classification",
+  "generated_utc": "2026-09-08T17:41:28+00:00",
+  "finished_utc": "2026-09-08T17:44:53+00:00",
+  "dataset": {
+    "name": "UCI Heart Disease (Cleveland)",
+    "page": "https://archive.ics.uci.edu/dataset/45/heart+disease",
+    "archive": "https://archive.ics.uci.edu/static/public/45/heart+disease.zip",
+    "file": "processed.cleveland.data",
+    "rows": 303,
+    "features": 13,
+    "classes": 2,
+    "target": "target",
+    "target_description": "Angiographic heart disease status. 0 = less than 50% diameter narrowing in all major vessels (Negative). 1 = more than 50% narrowing in at least one major vessel (Positive). Derived from the original 'num' column by binarising values 1-4 to 1.",
+    "class_counts": {
+      "0": 164,
+      "1": 139
+    }
+  },
+  "final_model": {
+    "name": "Logistic Regression",
+    "estimator": "LogisticRegression",
+    "hyperparameters": {
+      "clf__C": 0.5,
+      "clf__class_weight": "balanced",
+      "clf__l1_ratio": 0.0
+    },
+    "search_strategy": "GridSearchCV(24 combos)",
+    "decision_threshold": 0.38,
+    "threshold_rationale": "Chosen on cross-validated training predictions as the highest-specificity threshold that still reaches 85% sensitivity. The test set was not used to pick it.",
+    "calibration": "raw",
+    "local_explanation_method": "linear_coefficients"
+  },
+  "split": {
+    "strategy": "stratified train_test_split",
+    "test_size": 0.2,
+    "random_seed": 42,
+    "train_rows": 242,
+    "test_rows": 61,
+    "cv": "RepeatedStratifiedKFold(5 folds x 5 repeats)"
+  },
+  "label_mapping": {
+    "0": "Negative",
+    "1": "Positive"
+  },
+  "environment": {
+    "python": "3.14.7",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "scikit_learn": "1.9.0",
+    "numpy": "2.5.2",
+    "pandas": "3.0.5",
+    "xgboost_available": true,
+    "xgboost_error": null,
+    "shap_available": true,
+    "shap_error": null,
+    "xgboost": "3.4.1"
+  },
+  "timings_seconds": {
+    "eda": 5.52,
+    "imbalance_study": 1.89,
+    "early_stopping": 0.57,
+    "tune::Logistic Regression": 6.08,
+    "tune::SVM (Linear)": 0.97,
+    "tune::SVM (RBF)": 5.08,
+    "tune::Random Forest": 104.68,
+    "tune::XGBoost": 35.31,
+    "cv::Logistic Regression": 1.1,
+    "cv::SVM (Linear)": 1.33,
+    "cv::SVM (RBF)": 1.42,
+    "cv::Random Forest": 18.08,
+    "cv::XGBoost": 3.34,
+    "calibration": 1.29,
+    "explainability": 8.45
+  },
+  "figures": {
+    "target_distribution": "outputs/figures/01_target_distribution.png",
+    "numeric_distributions": "outputs/figures/02_numeric_distributions.png",
+    "boxplots": "outputs/figures/03_boxplots_by_target.png",
+    "correlation": "outputs/figures/04_correlation_heatmap.png",
+    "categorical_rates": "outputs/figures/05_categorical_outcome_rates.png",
+    "missingness": "outputs/figures/06_missingness.png",
+    "roc_curve": "outputs/figures/10_roc_curve.png",
+    "pr_curve": "outputs/figures/11_pr_curve.png",
+    "confusion_matrix": "outputs/figures/12_confusion_matrix.png",
+    "calibration": "outputs/figures/13_calibration_curve.png",
+    "threshold_sweep": "outputs/figures/14_threshold_sweep.png",
+    "model_comparison": "outputs/figures/15_model_comparison.png",
+    "permutation_importance": "outputs/figures/16_permutation_importance.png",
+    "coefficients": "outputs/figures/17_coefficients.png"
+  }
+}

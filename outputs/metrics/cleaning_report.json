@@ -1,0 +1,24 @@
+{
+  "rows_in": 303,
+  "cols_in": 14,
+  "duplicates_removed": 0,
+  "missing_before": {
+    "ca": 4,
+    "thal": 2
+  },
+  "invalid_values_found": {},
+  "out_of_domain_clipped": {},
+  "rows_out": 303,
+  "cols_out": 14,
+  "class_counts": {
+    "0": 164,
+    "1": 139
+  },
+  "notes": [
+    "Target: 'num' (0-4 severity) binarised to 0 / 1. Values 1-4 all mean >50% narrowing in at least one vessel; the 1-4 sub-levels have very few samples each (n<40), so a 5-class model would be unreliable at n=303.",
+    "Missing values found in ['ca', 'thal'] (6 cells, 0.14% of the frame). They are NOT dropped here: imputation happens inside the modelling pipeline so it is fitted on training folds only (leakage control).",
+    "Exact duplicate rows: 0. None found, nothing removed.",
+    "No value fell outside its documented UCI domain, so no coercion was needed.",
+    "Outliers retained. Extreme values here (e.g. chol = 564 mg/dl) are clinically plausible and informative; deleting them at n=303 would discard real signal. Robustness is instead handled by scaling and by regularised / tree-based models."
+  ]
+}

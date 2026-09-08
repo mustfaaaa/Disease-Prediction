@@ -1,0 +1,131 @@
+{
+  "raw": {
+    "mean_predicted": [
+      0.0604,
+      0.1449,
+      0.2491,
+      0.3535,
+      0.4475,
+      0.5313,
+      0.6482,
+      0.7387,
+      0.8458,
+      0.9623
+    ],
+    "observed_frequency": [
+      0.0426,
+      0.1034,
+      0.2174,
+      0.4,
+      0.1667,
+      0.6667,
+      0.5556,
+      0.9231,
+      0.8571,
+      0.9245
+    ],
+    "bin_counts": [
+      47,
+      29,
+      23,
+      20,
+      18,
+      9,
+      9,
+      13,
+      21,
+      53
+    ],
+    "brier": 0.1203,
+    "expected_calibration_error": 0.0638,
+    "n_bins": 10,
+    "roc_auc": 0.9048
+  },
+  "sigmoid": {
+    "mean_predicted": [
+      0.073,
+      0.1406,
+      0.249,
+      0.3466,
+      0.4402,
+      0.558,
+      0.6492,
+      0.7398,
+      0.8491,
+      0.947
+    ],
+    "observed_frequency": [
+      0.037,
+      0.0952,
+      0.1786,
+      0.3077,
+      0.3333,
+      0.6,
+      0.9286,
+      0.875,
+      0.8571,
+      0.9667
+    ],
+    "bin_counts": [
+      27,
+      42,
+      28,
+      26,
+      21,
+      10,
+      14,
+      16,
+      28,
+      30
+    ],
+    "brier": 0.1228,
+    "expected_calibration_error": 0.0637,
+    "n_bins": 10,
+    "roc_auc": 0.9049
+  },
+  "isotonic": {
+    "mean_predicted": [
+      0.0436,
+      0.151,
+      0.2411,
+      0.3367,
+      0.441,
+      0.5543,
+      0.6763,
+      0.7604,
+      0.8701,
+      0.9605
+    ],
+    "observed_frequency": [
+      0.0714,
+      0.2381,
+      0.2941,
+      0.1333,
+      0.3684,
+      0.75,
+      0.5,
+      0.75,
+      0.9444,
+      0.9167
+    ],
+    "bin_counts": [
+      70,
+      21,
+      17,
+      15,
+      19,
+      8,
+      6,
+      8,
+      18,
+      60
+    ],
+    "brier": 0.1213,
+    "expected_calibration_error": 0.0652,
+    "n_bins": 10,
+    "roc_auc": 0.9
+  },
+  "best_by_brier": "raw",
+  "applied": "raw",
+  "note": "Brier score and expected calibration error are computed on cross-validated training predictions. Platt scaling (sigmoid) and isotonic regression were both fitted inside CV. The variant with the lowest Brier score is 'raw'; a margin of 0.002 is required before replacing the simpler uncalibrated model."
+}

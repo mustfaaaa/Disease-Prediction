@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cardiac Risk Model Explorer — ML classification on structured medical data</title>
+<meta name="description" content="An educational machine-learning tool that classifies structured cardiology records from the UCI Heart Disease dataset and explains what drove each model output. Not a diagnostic tool.">
+<meta name="color-scheme" content="light dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/static/styles.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e7490'/%3E%3Cpath d='M5 16h5l2.5-6 4 12 3-8 2 2h5.5' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<!-- icon sprite: SVG only, no emoji used as iconography anywhere -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-pulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l2-5 4 11 3-7 1.5 1H22"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5a2 2 0 0 1 2-2h2M17 3h2a2 2 0 0 1 2 2v2M21 17v2a2 2 0 0 1-2 2h-2M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h2l1.5-3 2.5 6 1.5-3h2"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4M4 4h13l-2 4 2 4H4"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m4 12 5 5L20 6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M6 13l6 6 6-6"/></symbol>
+    <symbol id="i-shuffle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="#home">
+      <span class="brand-mark" aria-hidden="true"><svg><use href="#i-pulse"/></svg></span>
+      <span class="brand-text">
+        <span class="brand-name">Cardiac Risk Model Explorer</span>
+        <span class="brand-sub">Educational ML demonstration</span>
+      </span>
+    </a>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#prediction">Prediction</a></li>
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#model">Model</a></li>
+        <li><a href="#performance">Performance</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button type="button" class="icon-btn" id="theme-toggle" aria-label="Switch to dark theme">
+        <svg aria-hidden="true"><use href="#i-moon" id="theme-icon"/></svg>
+      </button>
+      <button type="button" class="icon-btn nav-toggle" id="nav-toggle"
+              aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+        <svg aria-hidden="true"><use href="#i-menu" id="nav-icon"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="disclaimer-bar">
+  <div class="shell">
+    <svg aria-hidden="true"><use href="#i-alert"/></svg>
+    <p style="margin:0">
+      <strong>Educational use only.</strong> This application demonstrates machine-learning
+      classification on a public research dataset. Model outputs are not medical diagnoses,
+      not medical advice, and not a substitute for evaluation by a qualified healthcare
+      professional.
+    </p>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ------------------------------------------------------------- HERO -->
+  <section class="section hero" id="home" aria-labelledby="hero-title">
+    <div class="shell hero-grid">
+      <div>
+        <span class="eyebrow">Supervised classification · UCI Heart Disease</span>
+        <h1 id="hero-title">AI-powered disease risk prediction</h1>
+        <p class="hero-lede">
+          Explore how machine-learning models classify structured medical data. Enter a
+          patient record, and the trained model returns a classification, a
+          model-estimated probability, and the inputs that moved that estimate most.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#prediction">
+            Start prediction <svg aria-hidden="true"><use href="#i-arrow-right"/></svg>
+          </a>
+          <a class="btn btn-secondary" href="#performance">See model performance</a>
+        </div>
+
+        <div class="hero-stats" id="hero-stats">
+          <div class="stat"><div class="stat-label">Loading</div><div class="skeleton-line tall"></div></div>
+          <div class="stat"><div class="stat-label">Loading</div><div class="skeleton-line tall"></div></div>
+          <div class="stat"><div class="stat-label">Loading</div><div class="skeleton-line tall"></div></div>
+          <div class="stat"><div class="stat-label">Loading</div><div class="skeleton-line tall"></div></div>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-labelledby="hero-panel-title">
+        <h2 id="hero-panel-title">What this is, and what it is not</h2>
+        <ul class="checklist">
+          <li><strong>It is</strong> a classifier trained on 303 anonymised cardiology records collected at the Cleveland Clinic in 1988.</li>
+          <li><strong>It is</strong> a way to see how four standard algorithms compare on the same data, under the same evaluation.</li>
+          <li><strong>It is not</strong> trained on modern, diverse, or complete patient data.</li>
+          <li><strong>It is not</strong> a screening test, a diagnosis, or a second opinion.</li>
+        </ul>
+        <p style="margin-top:var(--s-4);font-size:var(--fs-sm);color:var(--muted)">
+          Every number shown anywhere in this application is read from the artefacts of an
+          actual training run. Nothing is illustrative.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------- PREDICTION -->
+  <section class="section" id="prediction" aria-labelledby="prediction-title">
+    <div class="shell">
+      <div class="section-head">
+        <span class="eyebrow">Prediction</span>
+        <h2 id="prediction-title">Analyse a patient record</h2>
+        <p>
+          All thirteen inputs come from the dataset the model was trained on — nothing here
+          is invented. Fill them in, or load a real record from the held-out test split.
+        </p>
+      </div>
+
+      <div class="predict-layout">
+        <!-- form -->
+        <div class="form-card">
+          <div class="form-head">
+            <div>
+              <h3>Patient record</h3>
+              <p id="form-subtitle">13 clinical inputs, grouped by where they come from</p>
+            </div>
+            <button type="button" class="btn btn-quiet" id="load-example">
+              <svg aria-hidden="true"><use href="#i-shuffle"/></svg> Load a real record
+            </button>
+          </div>
+
+          <form id="predict-form" novalidate>
+            <div class="form-body">
+              <div class="alert" id="error-summary" role="alert" tabindex="-1" hidden>
+                <svg aria-hidden="true"><use href="#i-alert"/></svg>
+                <div>
+                  <h4 id="error-summary-title">There is a problem with this record</h4>
+                  <ul id="error-summary-list"></ul>
+                </div>
+              </div>
+
+              <div id="fieldsets" aria-busy="true">
+                <div class="skeleton-line w40"></div>
+                <div class="skeleton-line tall"></div>
+                <div class="skeleton-line tall"></div>
+                <div class="skeleton-line w60"></div>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary" id="submit-btn">
+                <svg aria-hidden="true"><use href="#i-scan"/></svg>
+                <span id="submit-label">Analyse risk</span>
+              </button>
+              <button type="reset" class="btn btn-secondary" id="reset-btn">
+                <svg aria-hidden="true"><use href="#i-reset"/></svg> Reset form
+              </button>
+              <span class="spacer"></span>
+              <span style="font-size:var(--fs-sm);color:var(--muted)" id="threshold-hint"></span>
+            </div>
+          </form>
+        </div>
+
+        <!-- result -->
+        <div class="result-panel">
+          <div id="result-region" aria-live="polite" aria-atomic="false">
+            <div class="result-empty" id="result-empty">
+              <svg aria-hidden="true"><use href="#i-scan"/></svg>
+              <h3>No result yet</h3>
+              <p>
+                Complete the record and select <strong>Analyse risk</strong>. The model
+                output, its estimated probability, the decision threshold and the most
+                influential inputs will appear here.
+              </p>
+            </div>
+          </div>
+
+          <details class="tech" id="tech-details">
+            <summary>View technical details</summary>
+            <div class="tech-body" id="tech-body">
+              <p style="color:var(--muted);font-size:var(--fs-sm);margin:0">Loading model metadata…</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- --------------------------------------------------------- HOW IT WORKS -->
+  <section class="section" id="how" aria-labelledby="how-title">
+    <div class="shell">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2 id="how-title">From a form to a number, in seven steps</h2>
+        <p>The same path runs for every request. No step is skipped, and no result is cached.</p>
+      </div>
+
+      <ol class="pipeline" style="list-style:none;padding:0;margin:0">
+        <li class="pipe-step"><div class="num">1</div><h4>Patient data</h4><p>Thirteen structured inputs, in the units the dataset records.</p></li>
+        <li class="pipe-step"><div class="num">2</div><h4>Validation</h4><p>Types, ranges and allowed categories are checked in the browser and again on the server.</p></li>
+        <li class="pipe-step"><div class="num">3</div><h4>Preprocessing</h4><p>The saved pipeline imputes, scales numeric inputs and one-hot encodes categories.</p></li>
+        <li class="pipe-step"><div class="num">4</div><h4>Model</h4><p>The exported classifier scores the encoded record.</p></li>
+        <li class="pipe-step"><div class="num">5</div><h4>Probability</h4><p>A model-estimated probability between 0 and 1 comes out.</p></li>
+        <li class="pipe-step"><div class="num">6</div><h4>Classification</h4><p>The probability is compared against the tuned decision threshold.</p></li>
+        <li class="pipe-step"><div class="num">7</div><h4>Explanation</h4><p>Per-feature contributions show what moved the model's own output.</p></li>
+      </ol>
+
+      <div class="grid grid-2" style="margin-top:var(--s-6)">
+        <div class="card">
+          <h3>Why the threshold is not 0.5</h3>
+          <p id="how-threshold" style="color:var(--ink-2)">Loading…</p>
+        </div>
+        <div class="card">
+          <h3>Why the two error types are not equal</h3>
+          <p id="how-errors" style="color:var(--ink-2)">Loading…</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------- MODEL -->
+  <section class="section" id="model" aria-labelledby="model-title">
+    <div class="shell">
+      <div class="section-head">
+        <span class="eyebrow">Model</span>
+        <h2 id="model-title">About the model</h2>
+        <p>
+          Four algorithm families were trained on the same split, tuned the same way, and
+          scored with the same metrics. One was selected by a rule fixed before the results
+          were seen.
+        </p>
+      </div>
+      <div id="model-content">
+        <div class="skeleton-line w60"></div><div class="skeleton-line tall"></div><div class="skeleton-line w80"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------- PERFORMANCE -->
+  <section class="section" id="performance" aria-labelledby="performance-title">
+    <div class="shell">
+      <div class="section-head">
+        <span class="eyebrow">Performance</span>
+        <h2 id="performance-title">Measured performance</h2>
+        <p>
+          Cross-validation figures come from the training split only. Test figures come from
+          61 records the models never saw during training, tuning or threshold selection.
+        </p>
+      </div>
+      <div id="performance-content">
+        <div class="skeleton-line w60"></div><div class="skeleton-line tall"></div><div class="skeleton-line w80"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------------------- ABOUT -->
+  <section class="section" id="about" aria-labelledby="about-title">
+    <div class="shell">
+      <div class="section-head">
+        <span class="eyebrow">About</span>
+        <h2 id="about-title">Purpose, data and limits</h2>
+      </div>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>What this project demonstrates</h3>
+          <p>
+            An end-to-end supervised-learning workflow on structured medical data: dataset
+            profiling, leakage-controlled preprocessing, four algorithm families, tuned
+            hyper-parameters, repeated cross-validation, threshold and calibration analysis,
+            explainability, and a served inference pipeline behind a real interface.
+          </p>
+          <p style="margin-bottom:0">
+            It was built as a university assignment and is intended for teaching and
+            portfolio use.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>The dataset</h3>
+          <div id="about-dataset"><p style="color:var(--muted)">Loading…</p></div>
+        </div>
+
+        <div class="card">
+          <h3>Known limitations</h3>
+          <ul class="checklist">
+            <li>303 records from a single hospital, collected in 1988 — small, old, and not representative of today's patients.</li>
+            <li>About two-thirds of the cohort is male, so performance on female patients is estimated from far fewer records.</li>
+            <li>The label is angiographic narrowing above 50%, not a clinical diagnosis or an outcome such as a cardiac event.</li>
+            <li>With 61 test records, every test metric carries a wide confidence interval; treat differences of a few points as noise.</li>
+            <li>Several inputs require a hospital exercise test, fluoroscopy or a thallium scan — this is not a self-assessment tool.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Technology</h3>
+          <div id="about-tech"><p style="color:var(--muted)">Loading…</p></div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:var(--s-5);border-color:var(--notice-line);background:var(--notice-bg);color:var(--notice-ink)">
+        <h3 style="color:inherit;display:flex;align-items:center;gap:var(--s-2)">
+          <svg aria-hidden="true" style="width:20px;height:20px"><use href="#i-alert"/></svg>
+          Medical disclaimer
+        </h3>
+        <p style="margin-bottom:0">
+          Educational use only. This application demonstrates machine-learning classification
+          on a public dataset. Model predictions are not medical diagnoses, medical advice, or
+          a substitute for evaluation by a qualified healthcare professional. Do not use it to
+          make, delay or avoid any health decision. If you have symptoms or concerns about
+          your heart, contact a clinician or your local emergency service.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <span>Cardiac Risk Model Explorer — educational machine-learning demonstration. Not a medical device.</span>
+    <span id="footer-meta"></span>
+  </div>
+</footer>
+
+<script src="/static/app.js"></script>
+</body>
+</html>

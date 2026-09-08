@@ -1,0 +1,383 @@
+{
+  "encoded_feature_count": 22,
+  "method": [
+    "coefficients",
+    "permutation_importance"
+  ],
+  "shap_available": true,
+  "shap_error": null,
+  "coefficients": [
+    {
+      "encoded": "num__ca",
+      "feature": "ca",
+      "label": "Major Vessels Coloured by Fluoroscopy",
+      "coefficient": 1.0278,
+      "odds_ratio": 2.795
+    },
+    {
+      "encoded": "bin__sex",
+      "feature": "sex",
+      "label": "Sex",
+      "coefficient": 0.9841,
+      "odds_ratio": 2.6755
+    },
+    {
+      "encoded": "nom__thal_3.0",
+      "feature": "thal",
+      "label": "Thallium Stress Test Result: Normal",
+      "coefficient": -0.778,
+      "odds_ratio": 0.4593
+    },
+    {
+      "encoded": "nom__cp_4.0",
+      "feature": "cp",
+      "label": "Chest Pain Type: Asymptomatic",
+      "coefficient": 0.7568,
+      "odds_ratio": 2.1314
+    },
+    {
+      "encoded": "nom__thal_7.0",
+      "feature": "thal",
+      "label": "Thallium Stress Test Result: Reversible defect",
+      "coefficient": 0.6057,
+      "odds_ratio": 1.8326
+    },
+    {
+      "encoded": "nom__slope_1.0",
+      "feature": "slope",
+      "label": "Peak Exercise ST Segment Slope: Upsloping",
+      "coefficient": -0.558,
+      "odds_ratio": 0.5724
+    },
+    {
+      "encoded": "nom__cp_1.0",
+      "feature": "cp",
+      "label": "Chest Pain Type: Typical angina",
+      "coefficient": -0.5557,
+      "odds_ratio": 0.5736
+    },
+    {
+      "encoded": "nom__cp_3.0",
+      "feature": "cp",
+      "label": "Chest Pain Type: Non-anginal pain",
+      "coefficient": -0.5541,
+      "odds_ratio": 0.5746
+    },
+    {
+      "encoded": "bin__exang",
+      "feature": "exang",
+      "label": "Exercise-Induced Angina",
+      "coefficient": 0.4799,
+      "odds_ratio": 1.616
+    },
+    {
+      "encoded": "num__thalach",
+      "feature": "thalach",
+      "label": "Maximum Heart Rate Achieved",
+      "coefficient": -0.3621,
+      "odds_ratio": 0.6962
+    },
+    {
+      "encoded": "nom__slope_2.0",
+      "feature": "slope",
+      "label": "Peak Exercise ST Segment Slope: Flat",
+      "coefficient": 0.3483,
+      "odds_ratio": 1.4166
+    },
+    {
+      "encoded": "nom__restecg_0.0",
+      "feature": "restecg",
+      "label": "Resting ECG Result: Normal",
+      "coefficient": -0.3447,
+      "odds_ratio": 0.7084
+    },
+    {
+      "encoded": "num__trestbps",
+      "feature": "trestbps",
+      "label": "Resting Blood Pressure",
+      "coefficient": 0.286,
+      "odds_ratio": 1.3311
+    },
+    {
+      "encoded": "nom__thal_6.0",
+      "feature": "thal",
+      "label": "Thallium Stress Test Result: Fixed defect",
+      "coefficient": -0.2129,
+      "odds_ratio": 0.8082
+    },
+    {
+      "encoded": "num__oldpeak",
+      "feature": "oldpeak",
+      "label": "ST Depression (Exercise vs Rest)",
+      "coefficient": 0.203,
+      "odds_ratio": 1.225
+    },
+    {
+      "encoded": "nom__slope_3.0",
+      "feature": "slope",
+      "label": "Peak Exercise ST Segment Slope: Downsloping",
+      "coefficient": -0.1755,
+      "odds_ratio": 0.839
+    },
+    {
+      "encoded": "bin__fbs",
+      "feature": "fbs",
+      "label": "Fasting Blood Sugar above 120 mg/dl",
+      "coefficient": -0.1747,
+      "odds_ratio": 0.8397
+    },
+    {
+      "encoded": "num__chol",
+      "feature": "chol",
+      "label": "Serum Cholesterol",
+      "coefficient": 0.1555,
+      "odds_ratio": 1.1682
+    },
+    {
+      "encoded": "num__age",
+      "feature": "age",
+      "label": "Age",
+      "coefficient": -0.0875,
+      "odds_ratio": 0.9162
+    },
+    {
+      "encoded": "nom__restecg_1.0",
+      "feature": "restecg",
+      "label": "Resting ECG Result: ST-T wave abnormality",
+      "coefficient": -0.0645,
+      "odds_ratio": 0.9376
+    },
+    {
+      "encoded": "nom__cp_2.0",
+      "feature": "cp",
+      "label": "Chest Pain Type: Atypical angina",
+      "coefficient": -0.0322,
+      "odds_ratio": 0.9683
+    },
+    {
+      "encoded": "nom__restecg_2.0",
+      "feature": "restecg",
+      "label": "Resting ECG Result: Left ventricular hypertrophy",
+      "coefficient": 0.024,
+      "odds_ratio": 1.0243
+    }
+  ],
+  "coefficient_note": "Numeric features are standardised before fitting, so coefficients are comparable across features. An odds ratio above 1 means the model raises its estimated odds as that encoded feature increases.",
+  "permutation_importance": [
+    {
+      "feature": "ca",
+      "label": "Major Vessels Coloured by Fluoroscopy",
+      "mean_drop_in_roc_auc": 0.08856,
+      "std": 0.0339
+    },
+    {
+      "feature": "cp",
+      "label": "Chest Pain Type",
+      "mean_drop_in_roc_auc": 0.03084,
+      "std": 0.0111
+    },
+    {
+      "feature": "thal",
+      "label": "Thallium Stress Test Result",
+      "mean_drop_in_roc_auc": 0.01392,
+      "std": 0.00924
+    },
+    {
+      "feature": "slope",
+      "label": "Peak Exercise ST Segment Slope",
+      "mean_drop_in_roc_auc": 0.01259,
+      "std": 0.00831
+    },
+    {
+      "feature": "oldpeak",
+      "label": "ST Depression (Exercise vs Rest)",
+      "mean_drop_in_roc_auc": 0.01032,
+      "std": 0.0043
+    },
+    {
+      "feature": "thalach",
+      "label": "Maximum Heart Rate Achieved",
+      "mean_drop_in_roc_auc": 0.0096,
+      "std": 0.00765
+    },
+    {
+      "feature": "exang",
+      "label": "Exercise-Induced Angina",
+      "mean_drop_in_roc_auc": 0.00916,
+      "std": 0.00312
+    },
+    {
+      "feature": "trestbps",
+      "label": "Resting Blood Pressure",
+      "mean_drop_in_roc_auc": 0.00725,
+      "std": 0.00577
+    },
+    {
+      "feature": "sex",
+      "label": "Sex",
+      "mean_drop_in_roc_auc": 0.00368,
+      "std": 0.00773
+    },
+    {
+      "feature": "restecg",
+      "label": "Resting ECG Result",
+      "mean_drop_in_roc_auc": 0.00238,
+      "std": 0.00385
+    },
+    {
+      "feature": "age",
+      "label": "Age",
+      "mean_drop_in_roc_auc": 0.00209,
+      "std": 0.00131
+    },
+    {
+      "feature": "fbs",
+      "label": "Fasting Blood Sugar above 120 mg/dl",
+      "mean_drop_in_roc_auc": 0.00025,
+      "std": 0.00147
+    },
+    {
+      "feature": "chol",
+      "label": "Serum Cholesterol",
+      "mean_drop_in_roc_auc": -0.00162,
+      "std": 0.00225
+    }
+  ],
+  "permutation_note": "Permutation importance shuffles one raw input column of the held-out test set and measures how much test ROC-AUC drops. A larger drop means the model leaned on that column more.",
+  "shap_summary": {
+    "available": true,
+    "model": "XGBoost",
+    "explainer": "shap.TreeExplainer (exact TreeSHAP)",
+    "rows_explained": 242,
+    "by_encoded_feature": [
+      {
+        "label": "Major Vessels Coloured by Fluoroscopy",
+        "mean_abs_shap": 0.58559
+      },
+      {
+        "label": "Chest Pain Type: Asymptomatic",
+        "mean_abs_shap": 0.58242
+      },
+      {
+        "label": "Thallium Stress Test Result: Normal",
+        "mean_abs_shap": 0.41042
+      },
+      {
+        "label": "Thallium Stress Test Result: Reversible defect",
+        "mean_abs_shap": 0.32066
+      },
+      {
+        "label": "Sex",
+        "mean_abs_shap": 0.27413
+      },
+      {
+        "label": "ST Depression (Exercise vs Rest)",
+        "mean_abs_shap": 0.21416
+      },
+      {
+        "label": "Age",
+        "mean_abs_shap": 0.15785
+      },
+      {
+        "label": "Maximum Heart Rate Achieved",
+        "mean_abs_shap": 0.15557
+      },
+      {
+        "label": "Serum Cholesterol",
+        "mean_abs_shap": 0.14027
+      },
+      {
+        "label": "Peak Exercise ST Segment Slope: Upsloping",
+        "mean_abs_shap": 0.12987
+      },
+      {
+        "label": "Exercise-Induced Angina",
+        "mean_abs_shap": 0.11979
+      },
+      {
+        "label": "Peak Exercise ST Segment Slope: Flat",
+        "mean_abs_shap": 0.11619
+      },
+      {
+        "label": "Resting ECG Result: Normal",
+        "mean_abs_shap": 0.06962
+      },
+      {
+        "label": "Resting Blood Pressure",
+        "mean_abs_shap": 0.0403
+      },
+      {
+        "label": "Resting ECG Result: Left ventricular hypertrophy",
+        "mean_abs_shap": 0.03835
+      }
+    ],
+    "by_feature": [
+      {
+        "feature": "thal",
+        "label": "Thallium Stress Test Result",
+        "value": 0.73107
+      },
+      {
+        "feature": "cp",
+        "label": "Chest Pain Type",
+        "value": 0.60294
+      },
+      {
+        "feature": "ca",
+        "label": "Major Vessels Coloured by Fluoroscopy",
+        "value": 0.58559
+      },
+      {
+        "feature": "sex",
+        "label": "Sex",
+        "value": 0.27413
+      },
+      {
+        "feature": "slope",
+        "label": "Peak Exercise ST Segment Slope",
+        "value": 0.24607
+      },
+      {
+        "feature": "oldpeak",
+        "label": "ST Depression (Exercise vs Rest)",
+        "value": 0.21416
+      },
+      {
+        "feature": "age",
+        "label": "Age",
+        "value": 0.15785
+      },
+      {
+        "feature": "thalach",
+        "label": "Maximum Heart Rate Achieved",
+        "value": 0.15557
+      },
+      {
+        "feature": "chol",
+        "label": "Serum Cholesterol",
+        "value": 0.14027
+      },
+      {
+        "feature": "exang",
+        "label": "Exercise-Induced Angina",
+        "value": 0.11979
+      },
+      {
+        "feature": "restecg",
+        "label": "Resting ECG Result",
+        "value": 0.10797
+      },
+      {
+        "feature": "trestbps",
+        "label": "Resting Blood Pressure",
+        "value": 0.0403
+      },
+      {
+        "feature": "fbs",
+        "label": "Fasting Blood Sugar above 120 mg/dl",
+        "value": 0.0
+      }
+    ],
+    "note": "Mean absolute SHAP value per feature across the training split, in log-odds units. It measures how much each input moves this model's output, not medical causation."
+  }
+}
