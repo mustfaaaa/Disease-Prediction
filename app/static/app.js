@@ -23,7 +23,17 @@
     : `${(Number(v) * 100).toFixed(d)}%`;
 
   async function api(path, options) {
-    const res = await fetch(path, options);
+    let res;
+    try {
+      res = await fetch(path, options);
+    } catch {
+      const err = new Error(
+        "Could not reach the prediction service. Check that the server is " +
+        "running, then try again.");
+      err.code = "network_error";
+      err.fields = {};
+      throw err;
+    }
     let body = null;
     try { body = await res.json(); } catch { /* non-JSON error page */ }
     if (!res.ok) {
@@ -512,7 +522,7 @@
       $("#error-summary").hidden = true;
       state.lastResult = null;
       $("#result-region").innerHTML = `
-        <div class="result-empty">
+        <div class="result-empty" id="result-empty">
           ${icon("i-scan")}
           <h3>No result yet</h3>
           <p>Complete the record and select <strong>Analyse risk</strong>. The model output,
@@ -1023,7 +1033,12 @@
         <p style="margin:8px 0 0">Run <code>python -m src.train</code>, then restart the server.</p></div>
       </div>`;
     });
-    $("#hero-stats").innerHTML = "";
+    $("#hero-stats").innerHTML =
+      `<p style="grid-column:1/-1;color:var(--ink-2);margin:0">
+         Model statistics are unavailable while the service cannot be reached.
+       </p>`;
+    $("#tech-body").innerHTML =
+      `<p style="margin:0;color:var(--ink-2)">${esc(message)}</p>`;
     renderResultError(message, "model_unavailable");
   }
 

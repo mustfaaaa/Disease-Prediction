@@ -83,6 +83,7 @@
 
   --header-h: 64px;
   --ease: cubic-bezier(.4, 0, .2, 1);
+  --chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 8 5 5 5-5'/%3E%3C/svg%3E");
 }
 
 @media (prefers-color-scheme: dark) {
@@ -401,8 +402,23 @@ legend {
 .control:focus-visible { border-color: var(--focus); box-shadow: 0 0 0 3px color-mix(in srgb, var(--focus) 22%, transparent); }
 select.control {
   appearance: none; cursor: pointer; padding-right: var(--s-6);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%2364798a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 8 5 5 5-5'/%3E%3C/svg%3E");
-  background-repeat: no-repeat; background-position: right var(--s-3) center; background-size: 18px;
+}
+/* The chevron is drawn with a mask rather than a coloured data URI, so it
+   follows the theme instead of staying light-mode grey on a dark field. */
+.field { position: relative; }
+.field:has(select.control)::after {
+  content: ""; position: absolute; right: var(--s-3); top: 0;
+  width: 18px; height: 46px; pointer-events: none;
+  background-color: var(--muted);
+  -webkit-mask: var(--chevron) no-repeat center / 18px;
+  mask: var(--chevron) no-repeat center / 18px;
+}
+/* label + 6px gap sits above the control; align the chevron to the control */
+.field:has(select.control)::after { top: calc(1.45em + 6px); }
+/* Without :has() the chevron rule never matches, so hand the select back its
+   native indicator rather than leaving a dropdown with no affordance. */
+@supports not selector(:has(*)) {
+  select.control { appearance: auto; padding-right: var(--s-3); }
 }
 .field-error-text { display: none; font-size: var(--fs-sm); color: var(--error-ink); font-weight: 550; }
 .field.has-error .control { border-color: var(--error-ink); background: var(--error-bg); }
